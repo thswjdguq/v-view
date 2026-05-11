@@ -1,0 +1,48 @@
+name: v_view
+description: "AI 기반 가상 면접 코칭 앱 v-view"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.8
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  flutter_riverpod: ^2.6.1
+
+  # Local DB
+  hive_flutter: ^1.1.0
+
+  # Network
+  dio: ^5.8.0+1
+
+  # Environment
+  flutter_dotenv: ^5.2.1
+
+  # Camera & ML
+  camera: ^0.11.1
+  google_mlkit_face_detection: ^0.11.0
+
+  # Chart
+  fl_chart: ^0.70.2
+
+  # Permission
+  permission_handler: ^11.4.0
+
+  # Utils
+  uuid: ^4.5.1
+  intl: ^0.20.2
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
