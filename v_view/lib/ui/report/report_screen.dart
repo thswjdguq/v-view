@@ -43,6 +43,8 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
 
     ref.read(reportProvider.notifier).generate(
           interviewType: sessionInput.type,
+          position: sessionInput.position,
+          company: sessionInput.company,
           qaList: qaList,
           gazeMetrics: gazeMetrics,
           totalDurationSeconds: interviewState.questions.length * 120,

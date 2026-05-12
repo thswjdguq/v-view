@@ -84,7 +84,7 @@
 ### 기능 1 — AI 맞춤 질문 생성 (Week 4~5)
 
 - [ ] **1.1** Claude API 실제 연동 테스트 (실 API 키로 질문 생성 확인)
-- [ ] **1.2** 질문 생성 로딩 UI 개선 (Shimmer 또는 스켈레톤)
+- [x] **1.2** 질문 생성 로딩 UI 개선 (Shimmer 또는 스켈레톤)
 - [ ] **1.3** 질문 생성 실패 시 재시도 흐름 E2E 확인
 - [ ] **1.4** 꼬리 질문 생성 흐름 실기기 테스트
 
@@ -100,13 +100,13 @@
 
 - [ ] **3.1** `GazeMetricsCard` 파이차트 실 데이터 연결 확인
 - [x] **3.2** 히스토리 최근 5회 추이 그래프 (`LineChart`, fl_chart)
-- [ ] **3.3** 개선 포인트 TOP3 — 근거 지표 연결 로직 검증
+- [x] **3.3** 개선 포인트 TOP3 — 근거 지표 연결 로직 검증
 - [ ] **3.4** 측정 불가/참고용 배너 표시 조건 확인
 - [ ] **3.5** AI 피드백 실패 시 fallback 리포트 표시 확인
 
 ### 기능 4 — 면접 기록 관리 (Week 5)
 
-- [ ] **4.1** 세션 종료 후 히스토리 목록에 자동 추가 확인
+- [x] **4.1** 세션 종료 후 히스토리 목록에 자동 추가 확인
 - [ ] **4.2** 히스토리 상세 → 리포트 재열람 흐름 테스트
 - [ ] **4.3** 단일 세션 삭제 — 삭제 불가 복구 안내 다이얼로그 확인
 - [x] **4.4** 전체 삭제 기능 추가 (HistoryListScreen 상단 버튼)
@@ -120,7 +120,7 @@
 ### 기능 6 — 권한·오류 처리 (Week 5~6)
 
 - [ ] **6.1** 카메라 권한 영구 거부 시 설정 이동 흐름 테스트
-- [ ] **6.2** 오프라인 상태 감지 및 안내 (Dio Interceptor 또는 connectivity_plus)
+- [x] **6.2** 오프라인 상태 감지 및 안내 (Dio Interceptor 또는 connectivity_plus)
 - [ ] **6.3** Dio 타임아웃 30초 경과 시 에러 메시지 표시 확인
 - [ ] **6.4** 앱 백그라운드 전환 → 타이머 정지 → 포어그라운드 복귀 → 재개 흐름 확인
 - [ ] **6.5** 세션 전 개인정보 처리 안내 다이얼로그 추가
@@ -131,8 +131,8 @@
 
 - [x] `gaze_analyzer_test.dart` — 시선 분산 1초 미만 카운트 안됨
 - [x] `gaze_analyzer_test.dart` — 응시율 계산 공식 검증
-- [ ] `session_input_notifier_test.dart` — isValid 조건 테스트
-- [ ] `report_notifier_test.dart` — AI 실패 시 fallback 리포트 생성
+- [x] `session_input_notifier_test.dart` — isValid 조건 테스트
+- [x] `report_notifier_test.dart` — AI 실패 시 fallback 리포트 생성
 - [ ] `flutter test` 전체 통과 확인
 
 ---

@@ -24,6 +24,7 @@ class ClaudeApiService {
         'content-type': 'application/json',
       },
     ));
+    _dio.interceptors.add(_NetworkErrorInterceptor());
   }
 
   Future<List<InterviewQuestion>> generateQuestions(SessionInput input) async {
@@ -163,3 +164,26 @@ $qaText
     return json.decode(text.substring(start, end));
   }
 }
+
+class _NetworkErrorInterceptor extends Interceptor {
+  @override
+  void onError(DioException err, ErrorInterceptorHandler handler) {
+    final enriched = switch (err.type) {
+      DioExceptionType.connectionError => err.copyWith(
+          message: '인터넷 연결을 확인해주세요. (연결 오류)',
+        ),
+      DioExceptionType.connectionTimeout ||
+      DioExceptionType.receiveTimeout =>
+        err.copyWith(
+          message: 'AI 서버 응답이 지연되고 있습니다. ($_timeoutSeconds초 초과)',
+        ),
+      DioExceptionType.badResponse => err.copyWith(
+          message: 'API 오류: ${err.response?.statusCode}',
+        ),
+      _ => err,
+    };
+    handler.next(enriched);
+  }
+}
+
+const _timeoutSeconds = ClaudeApiService._timeoutSeconds;

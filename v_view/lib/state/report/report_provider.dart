@@ -59,6 +59,8 @@ class ReportNotifier extends StateNotifier<ReportState> {
 
   Future<void> generate({
     required InterviewType interviewType,
+    required String position,
+    required String company,
     required List<QuestionAnswer> qaList,
     required GazeMetrics gazeMetrics,
     required int totalDurationSeconds,
@@ -96,8 +98,8 @@ class ReportNotifier extends StateNotifier<ReportState> {
       id: id,
       createdAt: report.createdAt,
       interviewType: interviewType,
-      position: '',
-      company: '',
+      position: position,
+      company: company,
       gazeRate: gazeMetrics.gazeRate,
       distractionCount: gazeMetrics.distractionCount,
       totalQuestions: qaList.length,
@@ -111,15 +113,43 @@ class ReportNotifier extends StateNotifier<ReportState> {
 
   // AI 실패 시 시선 지표만으로 최소 피드백 제공
   List<ImprovementPoint> _fallbackImprovements(GazeMetrics gaze) {
-    if (gaze.gazeRate < 60) {
-      return [
-        const ImprovementPoint(
-          title: '화면 응시 유지',
-          description: '면접 중 카메라를 더 자주 바라보는 연습이 필요합니다.',
-          evidenceMetric: '화면 응시율',
-        ),
-      ];
+    final points = <ImprovementPoint>[];
+
+    if (gaze.gazeRate < 70) {
+      points.add(ImprovementPoint(
+        title: '화면 응시 유지',
+        description:
+            '면접 중 카메라를 더 자주 바라보는 연습이 필요합니다. 현재 응시율 ${gaze.gazeRate.toStringAsFixed(0)}%.',
+        evidenceMetric: '화면 응시율 ${gaze.gazeRate.toStringAsFixed(0)}%',
+      ));
     }
-    return [];
+
+    if (gaze.distractionCount >= 3) {
+      points.add(ImprovementPoint(
+        title: '시선 분산 줄이기',
+        description:
+            '면접 중 ${gaze.distractionCount}회 시선이 분산되었습니다. 시선을 안정적으로 유지하는 연습을 권장합니다.',
+        evidenceMetric: '시선 분산 ${gaze.distractionCount}회',
+      ));
+    }
+
+    if (gaze.maxDistractionSeconds >= 3.0) {
+      points.add(ImprovementPoint(
+        title: '장시간 시선 분산 개선',
+        description:
+            '최대 ${gaze.maxDistractionSeconds.toStringAsFixed(1)}초간 시선이 분산된 구간이 있습니다. 집중력 훈련을 권장합니다.',
+        evidenceMetric: '최장 분산 ${gaze.maxDistractionSeconds.toStringAsFixed(1)}초',
+      ));
+    }
+
+    if (points.isEmpty) {
+      points.add(const ImprovementPoint(
+        title: '답변 구체성 향상',
+        description: '시선 지표는 양호합니다. STAR 기법으로 답변을 더 구체적으로 전달하는 연습을 권장합니다.',
+        evidenceMetric: '화면 응시율',
+      ));
+    }
+
+    return points.take(3).toList();
   }
 }

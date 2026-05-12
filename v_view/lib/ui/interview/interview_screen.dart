@@ -179,16 +179,7 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
 
   Widget _buildBody(BuildContext context, InterviewState state) {
     return switch (state.phase) {
-      InterviewPhase.loadingQuestions => const Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              CircularProgressIndicator(),
-              SizedBox(height: 16),
-              Text('AI가 맞춤 질문을 생성 중입니다...'),
-            ],
-          ),
-        ),
+      InterviewPhase.loadingQuestions => const _QuestionLoadingSkeleton(),
       InterviewPhase.idle when state.errorMessage != null => ErrorDisplay(
           message: state.errorMessage!,
           onRetry: () {
@@ -293,6 +284,94 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
             child: const Text('종료'),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _QuestionLoadingSkeleton extends StatefulWidget {
+  const _QuestionLoadingSkeleton();
+
+  @override
+  State<_QuestionLoadingSkeleton> createState() =>
+      _QuestionLoadingSkeletonState();
+}
+
+class _QuestionLoadingSkeletonState extends State<_QuestionLoadingSkeleton>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _ctrl;
+  late final Animation<double> _opacity;
+
+  @override
+  void initState() {
+    super.initState();
+    _ctrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 900),
+    )..repeat(reverse: true);
+    _opacity = Tween(begin: 0.3, end: 0.8).animate(
+      CurvedAnimation(parent: _ctrl, curve: Curves.easeInOut),
+    );
+  }
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 8),
+          const Text(
+            'AI가 맞춤 질문을 생성 중입니다...',
+            style: TextStyle(color: Colors.grey, fontSize: 14),
+          ),
+          const SizedBox(height: 24),
+          AnimatedBuilder(
+            animation: _opacity,
+            builder: (_, _) => Opacity(
+              opacity: _opacity.value,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  _SkeletonBar(width: double.infinity, height: 20),
+                  const SizedBox(height: 8),
+                  _SkeletonBar(width: 260, height: 20),
+                  const SizedBox(height: 32),
+                  _SkeletonBar(width: double.infinity, height: 120),
+                  const SizedBox(height: 16),
+                  _SkeletonBar(width: double.infinity, height: 120),
+                  const SizedBox(height: 16),
+                  _SkeletonBar(width: 200, height: 120),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SkeletonBar extends StatelessWidget {
+  final double width;
+  final double height;
+  const _SkeletonBar({required this.width, required this.height});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        color: Colors.grey.shade300,
+        borderRadius: BorderRadius.circular(8),
       ),
     );
   }
