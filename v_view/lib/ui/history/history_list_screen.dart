@@ -5,6 +5,7 @@ import '../../state/history/history_provider.dart';
 import '../../domain/history/session_history.dart';
 import '../../domain/session_setup/session_input.dart';
 import '../../state/report/report_provider.dart';
+import '../session_setup/session_setup_screen.dart';
 import 'history_detail_screen.dart';
 
 class HistoryListScreen extends ConsumerWidget {
@@ -16,7 +17,7 @@ class HistoryListScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('면접 기록'),
+        title: const Text('v-view'),
         actions: [
           if (items.isNotEmpty)
             IconButton(
@@ -25,6 +26,14 @@ class HistoryListScreen extends ConsumerWidget {
               onPressed: () => _confirmDeleteAll(context, ref),
             ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const SessionSetupScreen()),
+        ),
+        icon: const Icon(Icons.mic),
+        label: const Text('새 면접 시작'),
       ),
       body: items.isEmpty
           ? const Center(
