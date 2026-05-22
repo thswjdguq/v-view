@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../state/report/report_provider.dart';
 import '../../state/interview/interview_provider.dart';
 import '../../state/gaze/gaze_provider.dart';
 import '../../state/session_setup/session_setup_provider.dart';
 import '../../domain/interview/interview_question.dart';
+import '../../domain/session_setup/session_input.dart';
 import '../../state/history/history_provider.dart';
 import 'widgets/gaze_metrics_card.dart';
 import 'widgets/gaze_trend_chart.dart';
@@ -56,7 +58,17 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
     final state = ref.watch(reportProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('면접 리포트')),
+      appBar: AppBar(
+        title: const Text('면접 리포트'),
+        actions: [
+          if (state.phase == ReportPhase.done && state.report != null)
+            IconButton(
+              icon: const Icon(Icons.copy),
+              tooltip: '리포트 복사',
+              onPressed: () => _copyToClipboard(context, state),
+            ),
+        ],
+      ),
       body: switch (state.phase) {
         ReportPhase.generating => const Center(
             child: Column(
@@ -86,6 +98,34 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
         _ => const SizedBox.shrink(),
       },
     );
+  }
+
+  Future<void> _copyToClipboard(BuildContext context, ReportState state) async {
+    final report = state.report!;
+    final typeName = switch (report.interviewType) {
+      InterviewType.job => '직무면접',
+      InterviewType.personality => '인성면접',
+      InterviewType.university => '대학입시면접',
+    };
+    final buf = StringBuffer();
+    buf.writeln('v-view 면접 리포트');
+    buf.writeln('면접 유형: $typeName');
+    buf.writeln('화면 응시율: ${report.gazeMetrics.gazeRate.toStringAsFixed(0)}%');
+    buf.writeln('시선 분산: ${report.gazeMetrics.distractionCount}회');
+    if (report.improvementPoints.isNotEmpty) {
+      buf.writeln();
+      buf.writeln('개선 포인트');
+      for (int i = 0; i < report.improvementPoints.length; i++) {
+        final p = report.improvementPoints[i];
+        buf.writeln('${i + 1}. ${p.title}: ${p.description}');
+      }
+    }
+    await Clipboard.setData(ClipboardData(text: buf.toString()));
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('리포트가 클립보드에 복사됐습니다.')),
+      );
+    }
   }
 
   Widget _buildReport(BuildContext context, ReportState state) {

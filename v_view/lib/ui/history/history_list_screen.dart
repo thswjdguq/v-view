@@ -38,7 +38,7 @@ class HistoryListScreen extends ConsumerWidget {
       body: items.isEmpty
           ? const Center(
               child: Text(
-                '아직 면접 기록이 없습니다.\n첫 면접을 시작해보세요!',
+                '아직 연습 기록이 없어요.\n첫 면접을 시작해보세요!',
                 textAlign: TextAlign.center,
               ),
             )
