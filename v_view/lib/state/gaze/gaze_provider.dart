@@ -7,22 +7,30 @@ class GazeState {
   final bool isRunning;
   final List<GazeFrame> frames;
   final GazeMetrics? latestMetrics;
+  final bool isCurrentlyGazing;
+  final bool faceDetected;
 
   const GazeState({
     this.isRunning = false,
     this.frames = const [],
     this.latestMetrics,
+    this.isCurrentlyGazing = true,
+    this.faceDetected = false,
   });
 
   GazeState copyWith({
     bool? isRunning,
     List<GazeFrame>? frames,
     GazeMetrics? latestMetrics,
+    bool? isCurrentlyGazing,
+    bool? faceDetected,
   }) {
     return GazeState(
       isRunning: isRunning ?? this.isRunning,
       frames: frames ?? this.frames,
       latestMetrics: latestMetrics,
+      isCurrentlyGazing: isCurrentlyGazing ?? this.isCurrentlyGazing,
+      faceDetected: faceDetected ?? this.faceDetected,
     );
   }
 }
@@ -49,7 +57,11 @@ class GazeNotifier extends StateNotifier<GazeState> {
   Future<void> processFrame(InputImage inputImage) async {
     if (!state.isRunning) return;
     final frame = await _analyzer.analyze(inputImage);
-    state = state.copyWith(frames: [...state.frames, frame]);
+    state = state.copyWith(
+      frames: [...state.frames, frame],
+      isCurrentlyGazing: frame.isGazing,
+      faceDetected: frame.faceDetected,
+    );
   }
 
   void reset() => state = const GazeState();

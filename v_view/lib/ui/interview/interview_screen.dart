@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:camera/camera.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:permission_handler/permission_handler.dart';
 import '../../data/remote/gaze/camera_frame_converter.dart';
 import '../../state/interview/interview_provider.dart';
 import '../../state/session_setup/session_setup_provider.dart';
@@ -26,6 +28,8 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
 
   CameraController? _cameraController;
   bool _cameraReady = false;
+  bool _cameraError = false;
+  bool _micDenied = false;
 
   @override
   void initState() {
@@ -38,6 +42,13 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
   }
 
   Future<void> _initCamera() async {
+    try {
+      final micStatus = await Permission.microphone.status;
+      if (mounted && micStatus.isPermanentlyDenied) {
+        setState(() { _micDenied = true; });
+      }
+    } catch (_) {}
+
     try {
       final cameras = await availableCameras();
       final front = cameras.firstWhere(
@@ -56,17 +67,19 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
         _cameraController = controller;
         _cameraReady = true;
       });
-      controller.startImageStream((image) {
-        final inputImage = CameraFrameConverter.convert(
-          image: image,
-          camera: front,
-        );
-        if (inputImage != null) {
-          ref.read(gazeProvider.notifier).processFrame(inputImage);
-        }
-      });
+      if (!kIsWeb) {
+        controller.startImageStream((image) {
+          final inputImage = CameraFrameConverter.convert(
+            image: image,
+            camera: front,
+          );
+          if (inputImage != null) {
+            ref.read(gazeProvider.notifier).processFrame(inputImage);
+          }
+        });
+      }
     } catch (_) {
-      // Camera unavailable — gaze analysis runs without frames
+      if (mounted) setState(() { _cameraError = true; });
     }
   }
 
@@ -84,7 +97,7 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
     if (lifecycle == AppLifecycleState.paused) {
       _pauseSession();
       _cameraController?.stopImageStream();
-    } else if (lifecycle == AppLifecycleState.resumed) {
+    } else if (lifecycle == AppLifecycleState.resumed && !kIsWeb) {
       _cameraController?.startImageStream((image) {
         final camera = _cameraController?.description;
         if (camera == null) return;
@@ -202,7 +215,25 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TimerWidget(seconds: state.timerSeconds),
-          const SizedBox(height: 16),
+          const SizedBox(height: 8),
+          _GazeStatusBadge(),
+          if (_cameraError) ...[
+            const SizedBox(height: 4),
+            _StatusBanner(
+              icon: Icons.videocam_off,
+              message: '카메라가 켜져있지 않습니다. 시선 분석이 비활성화됩니다.',
+              color: Colors.orange,
+            ),
+          ],
+          if (_micDenied) ...[
+            const SizedBox(height: 4),
+            _StatusBanner(
+              icon: Icons.mic_off,
+              message: '마이크가 켜져있지 않습니다.',
+              color: Colors.orange,
+            ),
+          ],
+          const SizedBox(height: 8),
           QuestionCard(
             question: q,
             index: state.currentIndex,
@@ -377,6 +408,41 @@ class _SkeletonBar extends StatelessWidget {
   }
 }
 
+class _GazeStatusBadge extends ConsumerWidget {
+  const _GazeStatusBadge();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final gaze = ref.watch(gazeProvider);
+    if (!gaze.isRunning) return const SizedBox.shrink();
+
+    final isGazing = gaze.isCurrentlyGazing;
+    final hasFace = gaze.faceDetected;
+
+    final (label, color) = !hasFace
+        ? ('얼굴 미감지', Colors.grey)
+        : isGazing
+            ? ('응시 중', Colors.green)
+            : ('시선 분산', Colors.orange);
+
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Chip(
+        avatar: Icon(
+          hasFace ? (isGazing ? Icons.visibility : Icons.visibility_off) : Icons.face_retouching_off,
+          size: 16,
+          color: color,
+        ),
+        label: Text(label, style: TextStyle(fontSize: 12, color: color)),
+        backgroundColor: color.withValues(alpha: 0.1),
+        side: BorderSide(color: color.withValues(alpha: 0.4)),
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        visualDensity: VisualDensity.compact,
+      ),
+    );
+  }
+}
+
 class _CameraPreviewBadge extends StatelessWidget {
   final CameraController controller;
   const _CameraPreviewBadge({required this.controller});
@@ -389,6 +455,34 @@ class _CameraPreviewBadge extends StatelessWidget {
         width: 48,
         height: 36,
         child: CameraPreview(controller),
+      ),
+    );
+  }
+}
+
+class _StatusBanner extends StatelessWidget {
+  final IconData icon;
+  final String message;
+  final Color color;
+  const _StatusBanner({required this.icon, required this.message, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: color.withValues(alpha: 0.4)),
+      ),
+      child: Row(
+        children: [
+          Icon(icon, size: 16, color: color),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(message, style: TextStyle(fontSize: 12, color: color)),
+          ),
+        ],
       ),
     );
   }

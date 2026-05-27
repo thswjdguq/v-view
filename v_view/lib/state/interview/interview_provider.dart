@@ -11,6 +11,7 @@ class InterviewState {
   final int currentIndex;
   final Map<String, String> userAnswers;
   final int timerSeconds;
+  final int elapsedSeconds;
   final String? errorMessage;
 
   const InterviewState({
@@ -19,6 +20,7 @@ class InterviewState {
     this.currentIndex = 0,
     this.userAnswers = const {},
     this.timerSeconds = 120,
+    this.elapsedSeconds = 0,
     this.errorMessage,
   });
 
@@ -28,6 +30,7 @@ class InterviewState {
     int? currentIndex,
     Map<String, String>? userAnswers,
     int? timerSeconds,
+    int? elapsedSeconds,
     String? errorMessage,
   }) {
     return InterviewState(
@@ -36,6 +39,7 @@ class InterviewState {
       currentIndex: currentIndex ?? this.currentIndex,
       userAnswers: userAnswers ?? this.userAnswers,
       timerSeconds: timerSeconds ?? this.timerSeconds,
+      elapsedSeconds: elapsedSeconds ?? this.elapsedSeconds,
       errorMessage: errorMessage,
     );
   }
@@ -123,7 +127,10 @@ class InterviewNotifier extends StateNotifier<InterviewState> {
       nextQuestion(state.userAnswers[state.currentQuestion?.id] ?? '');
       return;
     }
-    state = state.copyWith(timerSeconds: state.timerSeconds - 1);
+    state = state.copyWith(
+      timerSeconds: state.timerSeconds - 1,
+      elapsedSeconds: state.elapsedSeconds + 1,
+    );
   }
 
   void resetTimer(int seconds) =>

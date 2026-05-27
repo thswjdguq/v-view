@@ -12,6 +12,7 @@ import 'widgets/gaze_metrics_card.dart';
 import 'widgets/gaze_trend_chart.dart';
 import 'widgets/improvement_list.dart';
 import 'widgets/qa_summary_list.dart';
+import 'widgets/session_summary_card.dart';
 
 class ReportScreen extends ConsumerStatefulWidget {
   const ReportScreen({super.key});
@@ -49,7 +50,7 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
           company: sessionInput.company,
           qaList: qaList,
           gazeMetrics: gazeMetrics,
-          totalDurationSeconds: interviewState.questions.length * 120,
+          totalDurationSeconds: interviewState.elapsedSeconds,
         );
   }
 
@@ -143,6 +144,8 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
                 child: Text('AI 피드백 생성에 실패하여 시선 지표만 제공됩니다.'),
               ),
             ),
+          SessionSummaryCard(report: report),
+          const SizedBox(height: 16),
           GazeMetricsCard(metrics: report.gazeMetrics),
           const SizedBox(height: 16),
           GazeTrendChart(

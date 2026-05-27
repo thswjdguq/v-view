@@ -3,6 +3,13 @@ allprojects {
         google()
         mavenCentral()
     }
+    configurations.all {
+        resolutionStrategy.eachDependency {
+            if (requested.group == "androidx.concurrent" && requested.name == "concurrent-futures") {
+                useVersion("1.2.0")
+            }
+        }
+    }
 }
 
 val newBuildDir: Directory =
@@ -17,6 +24,15 @@ subprojects {
 }
 subprojects {
     project.evaluationDependsOn(":app")
+}
+
+subprojects {
+    afterEvaluate {
+        if (plugins.hasPlugin("com.android.library") || plugins.hasPlugin("com.android.application")) {
+            dependencies.add("implementation", "androidx.concurrent:concurrent-futures:1.2.0")
+            dependencies.add("implementation", "androidx.concurrent:concurrent-futures-ktx:1.2.0")
+        }
+    }
 }
 
 tasks.register<Delete>("clean") {
