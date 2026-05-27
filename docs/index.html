@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>v-view 중간발표 — 손정협</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.css" />
+<style>
+/* ── Base ─────────────────────────────────────────── */
+:root {
+  --bg:      #0B1120;
+  --surface: #151F35;
+  --indigo:  #6366F1;
+  --violet:  #818CF8;
+  --green:   #22D3A2;
+  --amber:   #FBBF24;
+  --red:     #F87171;
+  --fg:      #F1F5F9;
+  --muted:   #94A3B8;
+}
+.reveal-viewport { background: var(--bg); }
+.reveal { font-family: 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; color: var(--fg); }
+.reveal h1, .reveal h2, .reveal h3 { font-weight: 800; letter-spacing: -0.03em; }
+.reveal h1 { font-size: 2.6em; }
+.reveal h2 { font-size: 1.7em; }
+.reveal section { padding: 0 2rem; }
+.reveal .slides section { top: 0; }
+
+/* ── Accent line ─────────────────────────────────── */
+.accent { color: var(--indigo); }
+.green  { color: var(--green); }
+.amber  { color: var(--amber); }
+.muted  { color: var(--muted); font-size: 0.7em; }
+hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em; opacity: 0.5; }
+
+/* ── Card grid ───────────────────────────────────── */
+.cards { display: flex; gap: 1rem; justify-content: center; margin-top: 0.8rem; }
+.card  {
+  background: var(--surface); border: 1px solid rgba(99,102,241,0.3);
+  border-radius: 12px; padding: 1.1rem 1.4rem; flex: 1; text-align: center;
+}
+.card .icon { font-size: 1.8em; margin-bottom: 0.3em; display: block; }
+.card h3   { margin: 0.2em 0 0.4em; font-size: 0.95em; color: var(--violet); }
+.card p    { margin: 0; font-size: 0.72em; color: var(--muted); line-height: 1.5; }
+
+/* ── WBS table ───────────────────────────────────── */
+.wbs { width: 100%; border-collapse: collapse; font-size: 0.72em; margin-top: 0.6rem; }
+.wbs th { background: rgba(99,102,241,0.25); padding: 0.45em 0.8em; text-align: left; color: var(--violet); }
+.wbs td { padding: 0.38em 0.8em; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.wbs tr.done td:first-child::before { content: ''; }
+.badge {
+  display: inline-block; padding: 0.15em 0.6em; border-radius: 100px; font-size: 0.85em; font-weight: 700;
+}
+.done-b  { background: rgba(34,211,162,0.15); color: var(--green); }
+.wip-b   { background: rgba(251,191,36,0.15);  color: var(--amber); }
+.wait-b  { background: rgba(148,163,184,0.12); color: var(--muted); }
+
+/* ── Problem big text ────────────────────────────── */
+.big-q { font-size: 1.6em; font-weight: 800; line-height: 1.3; margin: 0.5em 0; }
+.vs    { display: flex; gap: 1.5rem; margin-top: 0.8rem; }
+.vs-left  { flex:1; background: rgba(248,113,113,0.12); border:1px solid rgba(248,113,113,0.3); border-radius:10px; padding:0.9rem; }
+.vs-right { flex:1; background: rgba(34,211,162,0.12); border:1px solid rgba(34,211,162,0.3); border-radius:10px; padding:0.9rem; }
+.vs h3  { margin: 0 0 0.5em; font-size: 0.85em; }
+.vs ul  { margin: 0; padding-left: 1.1em; font-size: 0.72em; color: var(--muted); line-height: 1.8; }
+
+/* ── Mermaid override ────────────────────────────── */
+.mermaid { font-size: 1em !important; }
+.mermaid svg { max-height: 55vh; }
+
+/* ── CTA final slide ─────────────────────────────── */
+.cta-url {
+  background: var(--surface); border: 2px solid var(--indigo);
+  border-radius: 12px; padding: 0.8em 2em; display: inline-block;
+  font-size: 1em; font-family: monospace; color: var(--violet); margin: 0.6em 0;
+}
+.stack-pills { display:flex; flex-wrap:wrap; gap:0.4em; justify-content:center; margin-top:0.8em; }
+.pill {
+  background: rgba(99,102,241,0.18); border:1px solid rgba(99,102,241,0.4);
+  color: var(--violet); border-radius:100px; padding:0.2em 0.8em; font-size:0.7em;
+}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SLIDE 1 — Title             ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section>
+  <h1 class="accent">v-view</h1>
+  <hr class="sep" />
+  <p style="font-size:1.1em; margin:0.3em 0 0.8em;">
+    AI 면접 코칭 앱 &nbsp;·&nbsp; 중간발표
+  </p>
+  <p class="muted">손정협 &nbsp;|&nbsp; 2026-05-27</p>
+  <div class="stack-pills" style="margin-top:1.4em;">
+    <span class="pill">Flutter</span>
+    <span class="pill">Riverpod</span>
+    <span class="pill">Claude API</span>
+    <span class="pill">ML Kit</span>
+    <span class="pill">Hive</span>
+  </div>
+  <aside class="notes">8초. 제목 읽고 기술스택 한 번에 소개.</aside>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SLIDE 2 — 문제 정의         ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section>
+  <h2>왜 만들었나?</h2>
+  <hr class="sep" />
+  <p class="big-q">"혼자 하는 면접 연습엔<br/><span class="accent">피드백이 없다</span>"</p>
+  <div class="vs">
+    <div class="vs-left">
+      <h3>❌ 기존 방법</h3>
+      <ul>
+        <li>면접 코치 — 비싸다 (건당 5~10만원)</li>
+        <li>친구 도움 — 불편하고 주관적</li>
+        <li>혼자 녹화 — 뭘 개선해야 할지 모름</li>
+      </ul>
+    </div>
+    <div class="vs-right">
+      <h3 class="green">✅ v-view</h3>
+      <ul>
+        <li>AI가 직종·자기소개서 기반 질문 생성</li>
+        <li>실시간 시선 분석으로 집중도 측정</li>
+        <li>세션 종료 후 즉시 리포트 + 개선 포인트</li>
+      </ul>
+    </div>
+  </div>
+  <aside class="notes">20초. 문제 → 기존방법 한계 → v-view 대안 흐름으로.</aside>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SLIDE 3 — WBS 진행 현황     ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section>
+  <h2>WBS &amp; 진행 현황</h2>
+  <hr class="sep" />
+  <table class="wbs">
+    <thead>
+      <tr><th>주차</th><th>목표</th><th>핵심 산출물</th><th>상태</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Week 1</td><td>오리엔테이션</td>
+        <td>프로젝트 방향 확정</td>
+        <td><span class="badge done-b">✅ 완료</span></td>
+      </tr>
+      <tr>
+        <td>Week 2</td><td>기획·일정 수립</td>
+        <td><code>.planning/*</code> 5개 문서</td>
+        <td><span class="badge done-b">✅ 완료</span></td>
+      </tr>
+      <tr>
+        <td>Week 3</td><td>설계·환경 구축</td>
+        <td>아키텍처, ADR, Hello World</td>
+        <td><span class="badge done-b">✅ 완료</span></td>
+      </tr>
+      <tr>
+        <td><strong>Week 4</strong></td><td><strong>구현 1 + 중간발표</strong></td>
+        <td>6개 화면, ML Kit, Claude API</td>
+        <td><span class="badge wip-b">🔄 진행 중</span></td>
+      </tr>
+      <tr>
+        <td>Week 5</td><td>구현 2 + 테스트</td>
+        <td>단위 테스트, 오류 처리</td>
+        <td><span class="badge wait-b">⬜ 예정</span></td>
+      </tr>
+      <tr>
+        <td>Week 6</td><td>마감·배포</td>
+        <td>APK, Firebase Distribution</td>
+        <td><span class="badge wait-b">⬜ 예정</span></td>
+      </tr>
+      <tr>
+        <td>Week 7</td><td>최종 발표</td>
+        <td>슬라이드, 실기기 데모</td>
+        <td><span class="badge wait-b">⬜ 예정</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <aside class="notes">20초. 표를 가리키며 "현재 Week 4 진행 중" 강조.</aside>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SLIDE 4 — 아키텍처          ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section>
+  <h2>시스템 아키텍처</h2>
+  <hr class="sep" />
+  <div class="mermaid">
+%%{init:{"theme":"dark","themeVariables":{"primaryColor":"#6366F1","primaryTextColor":"#F1F5F9","primaryBorderColor":"#818CF8","lineColor":"#818CF8","secondaryColor":"#151F35","tertiaryColor":"#0B1120"}}}%%
+flowchart LR
+  subgraph UI["📱 Presentation"]
+    H(HistoryScreen)
+    I(InterviewScreen)
+    R(ReportScreen)
+  end
+  subgraph ST["⚡ Application\nRiverpod"]
+    GN(GazeNotifier)
+    IN(InterviewNotifier)
+    RN(ReportNotifier)
+  end
+  subgraph DO["🎯 Domain"]
+    E(Entities)
+    R2(Rules)
+  end
+  subgraph DA["💾 Data"]
+    CA(Claude API)
+    ML(ML Kit)
+    HV(Hive)
+  end
+  UI -->|이벤트| ST
+  ST -->|UseCase| DO
+  DO <-->|I/O| DA
+  </div>
+  <p class="muted" style="margin-top:0.4em;">ui → state → domain ← data &nbsp;·&nbsp; 단방향 의존성</p>
+  <aside class="notes">25초. "단방향 의존성" 키워드 강조. ui가 data를 직접 참조하지 않는 이유 한 문장.</aside>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SLIDE 5 — 핵심 기능 3가지   ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section>
+  <h2>구현된 핵심 기능</h2>
+  <hr class="sep" />
+  <div class="cards">
+    <div class="card">
+      <span class="icon">🤖</span>
+      <h3>AI 맞춤 질문</h3>
+      <p>Claude API<br/>직종·자소서 기반<br/>꼬리 질문 자동 생성</p>
+    </div>
+    <div class="card">
+      <span class="icon">👁️</span>
+      <h3>실시간 시선 분석</h3>
+      <p>ML Kit Face Detection<br/>연속 1초 이상 이탈<br/>= 시선 분산 1회</p>
+    </div>
+    <div class="card">
+      <span class="icon">📊</span>
+      <h3>세션 리포트</h3>
+      <p>응시율 파이차트<br/>개선 포인트 TOP3<br/>히스토리 관리</p>
+    </div>
+  </div>
+  <aside class="notes">20초. 카드 3개 순서대로 짧게. "원본 영상 서버 전송 없음" 개인정보 한 마디.</aside>
+</section>
+
+<!-- ╔══════════════════════════════╗ -->
+<!-- ║  SLIDE 6 — Closing           ║ -->
+<!-- ╚══════════════════════════════╝ -->
+<section>
+  <h2>다음 목표 &amp; 링크</h2>
+  <hr class="sep" />
+  <div class="cards" style="margin-bottom:0.8em;">
+    <div class="card" style="text-align:left;">
+      <h3 style="font-size:0.85em; color:var(--amber);">Week 5 목표</h3>
+      <p style="font-size:0.72em;">실기기 시선 분석 테스트<br/>단위 테스트 25개 통과<br/>Claude API 실 연동 확인</p>
+    </div>
+    <div class="card" style="text-align:left;">
+      <h3 style="font-size:0.85em; color:var(--amber);">Week 6 목표</h3>
+      <p style="font-size:0.72em;">Android APK 릴리즈 빌드<br/>Firebase App Distribution<br/>최종 발표 슬라이드</p>
+    </div>
+  </div>
+  <div class="cta-url">github.com/thswjdguq/v-view</div>
+  <aside class="notes">12초. URL 말하고 끝. 총 2분.</aside>
+</section>
+
+</div><!-- /slides -->
+</div><!-- /reveal -->
+
+<!-- ── Scripts (CDN, no build needed) ─────────────── -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'slide',
+    transitionSpeed: 'fast',
+    controls: true,
+    progress: true,
+    slideNumber: true,
+    plugins: [RevealNotes],
+  });
+  mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+  Reveal.on('ready', () => mermaid.run());
+  Reveal.on('slidechanged', () => mermaid.run());
+</script>
+</body>
+</html>
