@@ -1,0 +1,7 @@
+# android/key.properties.example
+# 이 파일을 android/key.properties 로 복사하고 실제 값으로 채우세요.
+# key.properties 는 절대 git에 커밋하지 마세요 (.gitignore 에 포함됨).
+storePassword=YOUR_KEYSTORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=upload
+storeFile=YOUR_KEYSTORE_PATH.jks

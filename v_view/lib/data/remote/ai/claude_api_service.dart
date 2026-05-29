@@ -8,7 +8,7 @@ import '../../../domain/gaze/gaze_metrics.dart';
 
 class ClaudeApiService {
   static const _baseUrl = 'https://api.anthropic.com/v1';
-  static const _model = 'claude-opus-4-7';
+  static const _model = 'claude-sonnet-4-6';
   static const _timeoutSeconds = 30;
 
   late final Dio _dio;
@@ -27,13 +27,16 @@ class ClaudeApiService {
     _dio.interceptors.add(_NetworkErrorInterceptor());
   }
 
+  static const _jsonSystem =
+      '반드시 유효한 JSON만 반환하세요. 설명이나 마크다운 코드블록을 포함하지 마세요.';
+
   Future<List<InterviewQuestion>> generateQuestions(SessionInput input) async {
-    final prompt = _buildQuestionPrompt(input);
     final response = await _dio.post('/messages', data: {
       'model': _model,
       'max_tokens': 1024,
+      'system': _jsonSystem,
       'messages': [
-        {'role': 'user', 'content': prompt}
+        {'role': 'user', 'content': _buildQuestionPrompt(input)}
       ],
     });
     return _parseQuestions(response.data);
@@ -43,12 +46,12 @@ class ClaudeApiService {
     required InterviewQuestion question,
     required String userAnswer,
   }) async {
-    final prompt = _buildFollowUpPrompt(question, userAnswer);
     final response = await _dio.post('/messages', data: {
       'model': _model,
       'max_tokens': 512,
+      'system': _jsonSystem,
       'messages': [
-        {'role': 'user', 'content': prompt}
+        {'role': 'user', 'content': _buildFollowUpPrompt(question, userAnswer)}
       ],
     });
     return _parseFollowUp(response.data, question.id);
@@ -58,12 +61,12 @@ class ClaudeApiService {
     required List<QuestionAnswer> qaList,
     required GazeMetrics gazeMetrics,
   }) async {
-    final prompt = _buildFeedbackPrompt(qaList, gazeMetrics);
     final response = await _dio.post('/messages', data: {
       'model': _model,
       'max_tokens': 1024,
+      'system': _jsonSystem,
       'messages': [
-        {'role': 'user', 'content': prompt}
+        {'role': 'user', 'content': _buildFeedbackPrompt(qaList, gazeMetrics)}
       ],
     });
     return _parseFeedback(response.data);

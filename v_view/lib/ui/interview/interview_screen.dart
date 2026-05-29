@@ -51,6 +51,10 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
 
     try {
       final cameras = await availableCameras();
+      if (cameras.isEmpty) {
+        if (mounted) setState(() { _cameraError = true; });
+        return;
+      }
       final front = cameras.firstWhere(
         (c) => c.lensDirection == CameraLensDirection.front,
         orElse: () => cameras.first,
