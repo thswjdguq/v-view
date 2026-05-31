@@ -464,14 +464,36 @@
   }
 
   .mermaid {
-    width: 100%;
+    flowchart TB
+  subgraph P["🖥 Presentation Layer"]
+    H[HomeScreen] --> S[SessionSetup] --> I[InterviewScreen] --> R[ReportScreen]
+  end
+
+  subgraph A["⚡ Application Layer (Riverpod)"]
+    HV[HistoryVM] --> SV[SessionVM] --> GV[GazeVM] --> RV[ReportVM]
+  end
+
+  subgraph D["💎 Domain Layer"]
+    QS[QuestionService] --> GS[GazeService] --> RS[ReportService]
+  end
+
+  subgraph DA["🗄 Data Layer"]
+    CA[ClaudeApi] --> GR[GazeRepo] --> SR[SessionRepo]
+  end
+
+  P --> A --> D --> DA
+
+  style P  fill:#1a1a2e,stroke:#7c6bff,color:#e8e8f0
+  style A  fill:#1a1a2e,stroke:#6bffce,color:#e8e8f0
+  style D  fill:#1a1a2e,stroke:#ff6b9d,color:#e8e8f0
+  style DA fill:#1a1a2e,stroke:#ffb86b,color:#e8e8f0
   }
 
-  .mermaid svg {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 420px;
-  }
+.mermaid svg {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 500px;  /* 기존 360px → 500px */
+}
 
   .arch-legend {
     display: flex;
