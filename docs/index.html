@@ -6,7 +6,6 @@
 <title>v-view 중간발표 — 손정협</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.css" />
 <style>
-/* ── Base ─────────────────────────────────────────── */
 :root {
   --bg:      #0B1120;
   --surface: #151F35;
@@ -26,14 +25,12 @@
 .reveal section { padding: 0 2rem; }
 .reveal .slides section { top: 0; }
 
-/* ── Accent line ─────────────────────────────────── */
 .accent { color: var(--indigo); }
 .green  { color: var(--green); }
 .amber  { color: var(--amber); }
 .muted  { color: var(--muted); font-size: 0.7em; }
 hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em; opacity: 0.5; }
 
-/* ── Card grid ───────────────────────────────────── */
 .cards { display: flex; gap: 1rem; justify-content: center; margin-top: 0.8rem; }
 .card  {
   background: var(--surface); border: 1px solid rgba(99,102,241,0.3);
@@ -43,19 +40,14 @@ hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em
 .card h3   { margin: 0.2em 0 0.4em; font-size: 0.95em; color: var(--violet); }
 .card p    { margin: 0; font-size: 0.72em; color: var(--muted); line-height: 1.5; }
 
-/* ── WBS table ───────────────────────────────────── */
 .wbs { width: 100%; border-collapse: collapse; font-size: 0.72em; margin-top: 0.6rem; }
 .wbs th { background: rgba(99,102,241,0.25); padding: 0.45em 0.8em; text-align: left; color: var(--violet); }
 .wbs td { padding: 0.38em 0.8em; border-bottom: 1px solid rgba(255,255,255,0.06); }
-.wbs tr.done td:first-child::before { content: ''; }
-.badge {
-  display: inline-block; padding: 0.15em 0.6em; border-radius: 100px; font-size: 0.85em; font-weight: 700;
-}
+.badge { display: inline-block; padding: 0.15em 0.6em; border-radius: 100px; font-size: 0.85em; font-weight: 700; }
 .done-b  { background: rgba(34,211,162,0.15); color: var(--green); }
 .wip-b   { background: rgba(251,191,36,0.15);  color: var(--amber); }
 .wait-b  { background: rgba(148,163,184,0.12); color: var(--muted); }
 
-/* ── Problem big text ────────────────────────────── */
 .big-q { font-size: 1.6em; font-weight: 800; line-height: 1.3; margin: 0.5em 0; }
 .vs    { display: flex; gap: 1.5rem; margin-top: 0.8rem; }
 .vs-left  { flex:1; background: rgba(248,113,113,0.12); border:1px solid rgba(248,113,113,0.3); border-radius:10px; padding:0.9rem; }
@@ -63,11 +55,10 @@ hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em
 .vs h3  { margin: 0 0 0.5em; font-size: 0.85em; }
 .vs ul  { margin: 0; padding-left: 1.1em; font-size: 0.72em; color: var(--muted); line-height: 1.8; }
 
-/* ── Mermaid override ────────────────────────────── */
-.mermaid { font-size: 1em !important; }
-.mermaid svg { max-height: 55vh; }
+/* 핵심 수정: TB 방향에서 svg가 꽉 차도록 */
+.mermaid { font-size: 1em !important; width: 100%; }
+.mermaid svg { max-height: 58vh; width: 100% !important; height: auto !important; }
 
-/* ── CTA final slide ─────────────────────────────── */
 .cta-url {
   background: var(--surface); border: 2px solid var(--indigo);
   border-radius: 12px; padding: 0.8em 2em; display: inline-block;
@@ -84,15 +75,11 @@ hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em
 <div class="reveal">
 <div class="slides">
 
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║  SLIDE 1 — Title             ║ -->
-<!-- ╚══════════════════════════════╝ -->
+<!-- SLIDE 1 -->
 <section>
   <h1 class="accent">v-view</h1>
   <hr class="sep" />
-  <p style="font-size:1.1em; margin:0.3em 0 0.8em;">
-    AI 면접 코칭 앱 &nbsp;·&nbsp; 중간발표
-  </p>
+  <p style="font-size:1.1em; margin:0.3em 0 0.8em;">AI 면접 코칭 앱 &nbsp;·&nbsp; 중간발표</p>
   <p class="muted">손정협 &nbsp;|&nbsp; 2026-05-27</p>
   <div class="stack-pills" style="margin-top:1.4em;">
     <span class="pill">Flutter</span>
@@ -104,9 +91,7 @@ hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em
   <aside class="notes">8초. 제목 읽고 기술스택 한 번에 소개.</aside>
 </section>
 
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║  SLIDE 2 — 문제 정의         ║ -->
-<!-- ╚══════════════════════════════╝ -->
+<!-- SLIDE 2 -->
 <section>
   <h2>왜 만들었나?</h2>
   <hr class="sep" />
@@ -132,9 +117,7 @@ hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em
   <aside class="notes">20초. 문제 → 기존방법 한계 → v-view 대안 흐름으로.</aside>
 </section>
 
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║  SLIDE 3 — WBS 진행 현황     ║ -->
-<!-- ╚══════════════════════════════╝ -->
+<!-- SLIDE 3 -->
 <section>
   <h2>WBS &amp; 진행 현황</h2>
   <hr class="sep" />
@@ -143,85 +126,42 @@ hr.sep  { border: none; border-top: 2px solid var(--indigo); margin: 0.6em 0 1em
       <tr><th>주차</th><th>목표</th><th>핵심 산출물</th><th>상태</th></tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Week 1</td><td>오리엔테이션</td>
-        <td>프로젝트 방향 확정</td>
-        <td><span class="badge done-b">✅ 완료</span></td>
-      </tr>
-      <tr>
-        <td>Week 2</td><td>기획·일정 수립</td>
-        <td><code>.planning/*</code> 5개 문서</td>
-        <td><span class="badge done-b">✅ 완료</span></td>
-      </tr>
-      <tr>
-        <td>Week 3</td><td>설계·환경 구축</td>
-        <td>아키텍처, ADR, Hello World</td>
-        <td><span class="badge done-b">✅ 완료</span></td>
-      </tr>
-      <tr>
-        <td><strong>Week 4</strong></td><td><strong>구현 1 + 중간발표</strong></td>
-        <td>6개 화면, ML Kit, Claude API</td>
-        <td><span class="badge wip-b">🔄 진행 중</span></td>
-      </tr>
-      <tr>
-        <td>Week 5</td><td>구현 2 + 테스트</td>
-        <td>단위 테스트, 오류 처리</td>
-        <td><span class="badge wait-b">⬜ 예정</span></td>
-      </tr>
-      <tr>
-        <td>Week 6</td><td>마감·배포</td>
-        <td>APK, Firebase Distribution</td>
-        <td><span class="badge wait-b">⬜ 예정</span></td>
-      </tr>
-      <tr>
-        <td>Week 7</td><td>최종 발표</td>
-        <td>슬라이드, 실기기 데모</td>
-        <td><span class="badge wait-b">⬜ 예정</span></td>
-      </tr>
+      <tr><td>Week 1</td><td>오리엔테이션</td><td>프로젝트 방향 확정</td><td><span class="badge done-b">✅ 완료</span></td></tr>
+      <tr><td>Week 2</td><td>기획·일정 수립</td><td>.planning/* 5개 문서</td><td><span class="badge done-b">✅ 완료</span></td></tr>
+      <tr><td>Week 3</td><td>설계·환경 구축</td><td>아키텍처, ADR, Hello World</td><td><span class="badge done-b">✅ 완료</span></td></tr>
+      <tr><td><strong>Week 4</strong></td><td><strong>구현 1 + 중간발표</strong></td><td>6개 화면, ML Kit, Claude API</td><td><span class="badge wip-b">🔄 진행 중</span></td></tr>
+      <tr><td>Week 5</td><td>구현 2 + 테스트</td><td>단위 테스트, 오류 처리</td><td><span class="badge wait-b">⬜ 예정</span></td></tr>
+      <tr><td>Week 6</td><td>마감·배포</td><td>APK, Firebase Distribution</td><td><span class="badge wait-b">⬜ 예정</span></td></tr>
+      <tr><td>Week 7</td><td>최종 발표</td><td>슬라이드, 실기기 데모</td><td><span class="badge wait-b">⬜ 예정</span></td></tr>
     </tbody>
   </table>
-  <aside class="notes">20초. 표를 가리키며 "현재 Week 4 진행 중" 강조.</aside>
+  <aside class="notes">20초. "현재 Week 4 진행 중" 강조.</aside>
 </section>
 
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║  SLIDE 4 — 아키텍처          ║ -->
-<!-- ╚══════════════════════════════╝ -->
+<!-- SLIDE 4 — 아키텍처 TB 수정 -->
 <section>
   <h2>시스템 아키텍처</h2>
   <hr class="sep" />
   <div class="mermaid">
 %%{init:{"theme":"dark","themeVariables":{"primaryColor":"#6366F1","primaryTextColor":"#F1F5F9","primaryBorderColor":"#818CF8","lineColor":"#818CF8","secondaryColor":"#151F35","tertiaryColor":"#0B1120"}}}%%
-flowchart LR
-  subgraph UI["📱 Presentation"]
-    H(HistoryScreen)
-    I(InterviewScreen)
-    R(ReportScreen)
-  end
-  subgraph ST["⚡ Application\nRiverpod"]
-    GN(GazeNotifier)
-    IN(InterviewNotifier)
-    RN(ReportNotifier)
-  end
-  subgraph DO["🎯 Domain"]
-    E(Entities)
-    R2(Rules)
-  end
-  subgraph DA["💾 Data"]
-    CA(Claude API)
-    ML(ML Kit)
-    HV(Hive)
-  end
-  UI -->|이벤트| ST
-  ST -->|UseCase| DO
-  DO <-->|I/O| DA
+flowchart TB
+  P["📱 Presentation\nHomeScreen · InterviewScreen · ReportScreen"]
+  A["⚡ Application · Riverpod\nGazeNotifier · InterviewNotifier · ReportNotifier"]
+  D["🎯 Domain\nEntities · Rules · UseCases"]
+  DA["💾 Data\nClaude API · ML Kit · Hive"]
+
+  P --> A --> D --> DA
+
+  style P  fill:#1a1a2e,stroke:#6366F1,color:#F1F5F9,stroke-width:2px
+  style A  fill:#1a1a2e,stroke:#22D3A2,color:#F1F5F9,stroke-width:2px
+  style D  fill:#1a1a2e,stroke:#F87171,color:#F1F5F9,stroke-width:2px
+  style DA fill:#1a1a2e,stroke:#FBBF24,color:#F1F5F9,stroke-width:2px
   </div>
-  <p class="muted" style="margin-top:0.4em;">ui → state → domain ← data &nbsp;·&nbsp; 단방향 의존성</p>
-  <aside class="notes">25초. "단방향 의존성" 키워드 강조. ui가 data를 직접 참조하지 않는 이유 한 문장.</aside>
+  <p class="muted" style="margin-top:0.6em;">Presentation → Application → Domain ← Data &nbsp;·&nbsp; 단방향 의존성</p>
+  <aside class="notes">25초. "단방향 의존성" 키워드 강조. UI가 Data를 직접 참조하지 않는다.</aside>
 </section>
 
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║  SLIDE 5 — 핵심 기능 3가지   ║ -->
-<!-- ╚══════════════════════════════╝ -->
+<!-- SLIDE 5 -->
 <section>
   <h2>구현된 핵심 기능</h2>
   <hr class="sep" />
@@ -242,12 +182,10 @@ flowchart LR
       <p>응시율 파이차트<br/>개선 포인트 TOP3<br/>히스토리 관리</p>
     </div>
   </div>
-  <aside class="notes">20초. 카드 3개 순서대로 짧게. "원본 영상 서버 전송 없음" 개인정보 한 마디.</aside>
+  <aside class="notes">20초. 카드 3개 순서대로. "원본 영상 서버 전송 없음" 한 마디.</aside>
 </section>
 
-<!-- ╔══════════════════════════════╗ -->
-<!-- ║  SLIDE 6 — Closing           ║ -->
-<!-- ╚══════════════════════════════╝ -->
+<!-- SLIDE 6 -->
 <section>
   <h2>다음 목표 &amp; 링크</h2>
   <hr class="sep" />
@@ -265,10 +203,9 @@ flowchart LR
   <aside class="notes">12초. URL 말하고 끝. 총 2분.</aside>
 </section>
 
-</div><!-- /slides -->
-</div><!-- /reveal -->
+</div>
+</div>
 
-<!-- ── Scripts (CDN, no build needed) ─────────────── -->
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/plugin/notes/notes.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.3/dist/mermaid.min.js"></script>
@@ -282,7 +219,11 @@ flowchart LR
     slideNumber: true,
     plugins: [RevealNotes],
   });
-  mermaid.initialize({ startOnLoad: false, theme: 'dark' });
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'dark',
+    flowchart: { useMaxWidth: true, htmlLabels: true }
+  });
   Reveal.on('ready', () => mermaid.run());
   Reveal.on('slidechanged', () => mermaid.run());
 </script>
