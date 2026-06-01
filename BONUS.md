@@ -8,7 +8,10 @@
 
 | 항목 | 내용 | 상태 | 관련 파일 |
 |---|---|---|---|
-| AUTHORING.md | AI Agent 부트스트래핑 방법론 작성 | ✅ 완료 | `AUTHORING.손정협.md` |
+| AI Agent 적극 활용 (+1) | Claude Code 전면 활용 · 커밋 이력 증거 | ✅ 완료 | `git log` |
+| AUTHORING.md (+2) | AI Agent 부트스트래핑 방법론 작성 | ✅ 완료 | `AUTHORING.손정협.md` |
+| LLM Wiki 암묵지 관리 (+1) | Claude Code 바이브 코딩 암묵지 정리 | ✅ 완료 | `LLM-WIKI.md` |
+| AI Agent 리포트 발표 (+2) | 10분 이상 발표 준비 | ⬜ 미완 | — |
 | 라이브 시연 | 실시간 부트스트래핑 데모 준비 | ✅ 스크립트 완성 | `AUTHORING.손정협.md` §10 |
 
 ---

@@ -124,9 +124,18 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
   void _startTimer() {
     _timer?.cancel();
     ref.read(interviewProvider.notifier).resetTimer(_defaultTimerSeconds);
-    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      final phase = ref.read(interviewProvider).phase;
-      if (phase == InterviewPhase.inProgress) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) async {
+      final state = ref.read(interviewProvider);
+      if (state.phase != InterviewPhase.inProgress) return;
+      if (state.timerSeconds <= 0) {
+        _timer?.cancel();
+        final answer = state.userAnswers[state.currentQuestion?.id] ?? '';
+        _answerController.clear();
+        await ref.read(interviewProvider.notifier).nextQuestion(answer);
+        if (ref.read(interviewProvider).phase == InterviewPhase.inProgress) {
+          _startTimer();
+        }
+      } else {
         ref.read(interviewProvider.notifier).tickTimer();
       }
     });

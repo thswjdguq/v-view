@@ -4,6 +4,7 @@ import '../../state/report/report_provider.dart';
 import '../report/widgets/gaze_metrics_card.dart';
 import '../report/widgets/improvement_list.dart';
 import '../report/widgets/qa_summary_list.dart';
+import '../report/widgets/session_summary_card.dart';
 
 class HistoryDetailScreen extends ConsumerWidget {
   final String reportId;
@@ -28,6 +29,8 @@ class HistoryDetailScreen extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SessionSummaryCard(report: report),
+            const SizedBox(height: 16),
             GazeMetricsCard(metrics: report.gazeMetrics),
             const SizedBox(height: 16),
             if (report.improvementPoints.isNotEmpty) ...[

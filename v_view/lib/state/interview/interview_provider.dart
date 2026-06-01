@@ -123,10 +123,6 @@ class InterviewNotifier extends StateNotifier<InterviewState> {
   void finish() => state = state.copyWith(phase: InterviewPhase.finished);
 
   void tickTimer() {
-    if (state.timerSeconds <= 0) {
-      nextQuestion(state.userAnswers[state.currentQuestion?.id] ?? '');
-      return;
-    }
     state = state.copyWith(
       timerSeconds: state.timerSeconds - 1,
       elapsedSeconds: state.elapsedSeconds + 1,

@@ -14,8 +14,8 @@
 | Week 2 | 기획 & 일정 수립 | ✅ 완료 |
 | Week 3 | 설계 & 환경 구축 | ✅ 완료 |
 | Week 4 | 구현 1 + **중간 발표** | ✅ 완료 |
-| Week 5 | 구현 2 (테스트/디버깅) | 🔄 진행 중 |
-| Week 6 | 마감 & 배포 | ⬜ 예정 |
+| Week 5 | 구현 2 (테스트/디버깅) | ✅ 완료 |
+| Week 6 | 마감 & 배포 | 🔄 진행 중 |
 | Week 7 | **최종 발표·평가** | ⬜ 예정 |
 
 ---
@@ -135,14 +135,16 @@
 - [x] `gaze_analyzer_test.dart` — 응시율 계산 공식 검증
 - [x] `session_input_notifier_test.dart` — isValid 조건 테스트
 - [x] `report_notifier_test.dart` — AI 실패 시 fallback 리포트 생성
-- [x] `flutter test` 전체 통과 확인
+- [x] `flutter test` 전체 통과 확인 (45/45)
+- [x] `interview_notifier_test.dart` — 상태 전환·타이머·API Fake 연동 20개
 
 ---
 
 ## 배포 TODO (Week 6)
 
-- [ ] `key.properties` + 키스토어 생성
-- [ ] Android APK 릴리즈 빌드 확인
+- [x] `key.properties.example` + 릴리즈 서명 설정 (`app/build.gradle.kts`)
+- [ ] `key.properties` 실제 키스토어 생성 및 연결
+- [ ] Android APK 릴리즈 빌드 확인 (`flutter build apk --release`)
 - [ ] Firebase App Distribution 테스트 배포
 - [x] `pubspec.yaml` 버전 번호 최종 확인 (`1.0.0+1`)
 
