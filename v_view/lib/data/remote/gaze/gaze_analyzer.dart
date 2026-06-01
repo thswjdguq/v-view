@@ -26,21 +26,28 @@ class GazeAnalyzer {
   );
 
   Future<GazeFrame> analyze(InputImage image) async {
-    final faces = await _detector.processImage(image);
-    if (faces.isEmpty) {
+    try {
+      final faces = await _detector.processImage(image);
+      if (faces.isEmpty) {
+        return GazeFrame(
+          isGazing: false,
+          faceDetected: false,
+          timestamp: DateTime.now(),
+        );
+      }
+      final face = faces.first;
+      return GazeFrame(
+        isGazing: _isLookingAtCamera(face),
+        faceDetected: true,
+        timestamp: DateTime.now(),
+      );
+    } catch (_) {
       return GazeFrame(
         isGazing: false,
         faceDetected: false,
         timestamp: DateTime.now(),
       );
     }
-    final face = faces.first;
-    final isGazing = _isLookingAtCamera(face);
-    return GazeFrame(
-      isGazing: isGazing,
-      faceDetected: true,
-      timestamp: DateTime.now(),
-    );
   }
 
   // 시선이 카메라 중앙을 향하는지 판단 (Euler Y, Z 각도 기준)
