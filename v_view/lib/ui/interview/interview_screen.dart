@@ -31,6 +31,7 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
   bool _cameraReady = false;
   bool _cameraError = false;
   bool _micDenied = false;
+  bool _isSubmitting = false;
 
   @override
   void initState() {
@@ -153,10 +154,13 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
   }
 
   Future<void> _submitAndNext() async {
+    if (_isSubmitting) return;
+    setState(() => _isSubmitting = true);
     final answer = _answerController.text.trim();
     _answerController.clear();
     _timer?.cancel();
     await ref.read(interviewProvider.notifier).nextQuestion(answer);
+    if (mounted) setState(() => _isSubmitting = false);
     _startTimer();
   }
 
@@ -278,8 +282,17 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
               const SizedBox(width: 12),
               Expanded(
                 child: FilledButton(
-                  onPressed: _submitAndNext,
-                  child: Text(state.isLastQuestion ? '완료' : '다음 질문'),
+                  onPressed: _isSubmitting ? null : _submitAndNext,
+                  child: _isSubmitting
+                      ? const SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: Colors.white,
+                          ),
+                        )
+                      : Text(state.isLastQuestion ? '완료' : '다음 질문'),
                 ),
               ),
             ],
