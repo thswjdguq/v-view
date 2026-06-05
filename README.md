@@ -1,10 +1,11 @@
 # v-view — AI 기반 가상 면접 코칭 앱
 
-> 카메라로 시선을 분석하고, Claude AI가 맞춤 질문과 피드백을 제공하는 모바일 면접 코칭 앱
+> 카메라로 시선을 분석하고, OpenAI가 맞춤 질문과 피드백을 제공하는 모바일 면접 코칭 앱
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.38-blue)](https://flutter.dev)
 [![Riverpod](https://img.shields.io/badge/Riverpod-2.6-purple)](https://riverpod.dev)
-[![Claude API](https://img.shields.io/badge/Claude-API-orange)](https://anthropic.com)
+[![OpenAI](https://img.shields.io/badge/OpenAI-gpt--4o--mini-green)](https://openai.com)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth%2BFirestore-orange)](https://firebase.google.com)
 
 ---
 
@@ -23,7 +24,7 @@
 ## 프로젝트 개요
 
 면접 준비생이 혼자서도 실전과 같은 환경에서 연습할 수 있도록:
-- **AI 맞춤 질문** — 직종·회사·자기소개서 기반으로 Claude API가 생성
+- **AI 맞춤 질문** — 직종·회사·자기소개서 기반으로 OpenAI gpt-4o-mini가 생성
 - **실시간 시선 분석** — ML Kit으로 카메라 응시 여부를 측정
 - **세션 피드백 리포트** — 시선 지표 + Q&A 요약 + 개선 포인트 TOP3
 - **로컬 히스토리** — Hive로 기기에 안전하게 저장, 원본 영상 저장 없음
@@ -34,13 +35,14 @@
 
 | # | 기능 | MVP 범위 |
 |---|---|---|
-| 1 | AI 맞춤 질문 생성 | 질문 수 3/5/7개 선택 + 꼬리 질문 자동 생성 |
+| 1 | AI 맞춤 질문 생성 | 질문 수 3/5/7개 선택 + 꼬리 질문 자동 생성 (OpenAI gpt-4o-mini) |
 | 2 | 실시간 시선 분석 | 응시율, 분산 횟수/시간 (ML Kit, 모바일) |
 | 3 | 세션 피드백 리포트 | 시선 지표 + AI 피드백 TOP3 + 최근 5회 추이 그래프 |
 | 4 | 면접 기록 관리 | 로컬 저장, 목록/상세 조회, 삭제 |
 | 5 | 세션 설정 | 면접 유형·질문 수·타이머(1/2/3분) 선택 |
 | 6 | 타이머 / 연속 질문 | 질문별 카운트다운, 시간 초과 시 자동 넘김 |
 | 7 | 권한·오류 처리 | 카메라/마이크 상태 배너, API 실패 시 fallback 리포트 |
+| 8 | 로그인 / 회원가입 | Firebase Auth 이메일 인증 + Firestore 사용자 저장 |
 
 > v2 범위(미구현): STT 발화 분석, 표정/감정 분석
 
@@ -84,9 +86,9 @@
             │          │
 ┌───────────▼──┐  ┌────▼──────────────┐
 │ data/local   │  │  data/remote      │
-│ Hive         │  │  Claude API       │
+│ Hive         │  │  OpenAI API       │
 │ (sessions,   │  │  ML Kit Gaze      │
-│  reports,    │  │                   │
+│  reports,    │  │  Firebase Auth    │
 │  history)    │  │                   │
 └──────────────┘  └───────────────────┘
 ```
@@ -130,7 +132,7 @@ v-view/
 │   │   ├── domain/          # 엔티티
 │   │   └── data/
 │   │       ├── local/       # Hive datasources
-│   │       └── remote/      # Claude API, ML Kit
+│   │       └── remote/      # OpenAI API, ML Kit, Firebase Auth
 │   └── pubspec.yaml
 ├── docs/
 │   ├── ARCHITECTURE.md

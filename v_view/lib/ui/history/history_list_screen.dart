@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 import '../../state/history/history_provider.dart';
+import '../../state/auth/auth_provider.dart' show authStateProvider, authNotifierProvider;
 import '../../domain/history/session_history.dart';
 import '../../domain/session_setup/session_input.dart';
 import '../../state/report/report_provider.dart';
@@ -14,6 +15,8 @@ class HistoryListScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final items = ref.watch(historyProvider);
+    final firebaseUser = ref.watch(authStateProvider).valueOrNull;
+    final userName = firebaseUser?.displayName ?? firebaseUser?.email ?? '';
 
     return Scaffold(
       appBar: AppBar(
@@ -25,6 +28,32 @@ class HistoryListScreen extends ConsumerWidget {
               tooltip: '전체 삭제',
               onPressed: () => _confirmDeleteAll(context, ref),
             ),
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.account_circle_outlined),
+            tooltip: '계정',
+            itemBuilder: (_) => [
+              if (userName.isNotEmpty)
+                PopupMenuItem(
+                  enabled: false,
+                  child: Text(userName, style: const TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              const PopupMenuItem(
+                value: 'signout',
+                child: Row(
+                  children: [
+                    Icon(Icons.logout, size: 18),
+                    SizedBox(width: 8),
+                    Text('로그아웃'),
+                  ],
+                ),
+              ),
+            ],
+            onSelected: (val) {
+              if (val == 'signout') {
+                ref.read(authNotifierProvider.notifier).signOut();
+              }
+            },
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
