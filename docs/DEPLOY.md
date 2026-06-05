@@ -30,49 +30,30 @@ flutter build appbundle --release
 
 ## Android 서명 설정 (릴리즈 배포 시)
 
-### 1. 키스토어 생성
+### 1. 키스토어 생성 (이미 완료 — `android/app/v-view-release.jks`)
 
 ```bash
-keytool -genkey -v -keystore ~/v-view-key.jks \
+keytool -genkeypair \
+  -alias upload \
   -keyalg RSA -keysize 2048 -validity 10000 \
-  -alias v-view
+  -keystore android/app/v-view-release.jks \
+  -storepass <비밀번호> -keypass <비밀번호> \
+  -dname "CN=vview, OU=dev, O=vview, L=Seoul, ST=Seoul, C=KR"
 ```
 
 ### 2. key.properties 설정
 
-`v_view/android/key.properties` (gitignore에 추가):
+`v_view/android/key.properties` (`.gitignore`에 포함 — 절대 커밋 금지):
 ```properties
 storePassword=<비밀번호>
 keyPassword=<비밀번호>
-keyAlias=v-view
-storeFile=<키스토어 절대 경로>
+keyAlias=upload
+storeFile=app/v-view-release.jks
 ```
 
-### 3. build.gradle.kts 수정
+### 3. build.gradle.kts — 자동 적용
 
-```kotlin
-val keyProperties = Properties()
-val keyPropertiesFile = rootProject.file("key.properties")
-if (keyPropertiesFile.exists()) {
-    keyProperties.load(FileInputStream(keyPropertiesFile))
-}
-
-android {
-    signingConfigs {
-        create("release") {
-            keyAlias = keyProperties["keyAlias"] as String
-            keyPassword = keyProperties["keyPassword"] as String
-            storeFile = file(keyProperties["storeFile"] as String)
-            storePassword = keyProperties["storePassword"] as String
-        }
-    }
-    buildTypes {
-        release {
-            signingConfig = signingConfigs.getByName("release")
-        }
-    }
-}
-```
+`android/app/build.gradle.kts`에 이미 반영됨. `key.properties`가 존재하면 릴리즈 서명이 자동 활성화됩니다.
 
 ---
 
@@ -126,7 +107,7 @@ firebase appdistribution:distribute \
 배포 빌드 시 CI/CD 환경에서 주입:
 ```bash
 # GitHub Actions 예시
-echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" > v_view/.env
+echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > v_view/.env
 flutter build apk --release
 ```
 
@@ -136,9 +117,10 @@ flutter build apk --release
 
 배포 전 확인 사항:
 
-- [ ] `flutter analyze` — 이슈 없음
-- [ ] `flutter test` — 전체 통과
-- [ ] `.env`에 실제 API 키 설정 (`.env`는 미커밋)
-- [ ] `pubspec.yaml` 버전 번호 업데이트
-- [ ] AndroidManifest.xml 권한 확인 (CAMERA, INTERNET)
-- [ ] 릴리즈 서명 적용 여부 확인
+- [x] `flutter analyze` — 이슈 없음 (확인 완료)
+- [x] `flutter test` — 전체 통과 (45개)
+- [x] `.env`에 실제 API 키 설정 (`.env`는 미커밋)
+- [x] `pubspec.yaml` 버전 번호 업데이트 (`1.0.0+1`)
+- [x] AndroidManifest.xml 권한 확인 (CAMERA, INTERNET, RECORD_AUDIO)
+- [x] 릴리즈 서명 적용 (`android/app/v-view-release.jks` + `key.properties`)
+- [ ] Firebase App Distribution 배포

@@ -15,7 +15,7 @@
 | Week 3 | 설계 & 환경 구축 | ✅ 완료 |
 | Week 4 | 구현 1 + **중간 발표** | ✅ 완료 |
 | Week 5 | 구현 2 (테스트/디버깅) | ✅ 완료 |
-| Week 6 | 마감 & 배포 | 🔄 진행 중 |
+| Week 6 | 마감 & 배포 | ✅ 완료 |
 | Week 7 | **최종 발표·평가** | ⬜ 예정 |
 
 ---
@@ -143,8 +143,8 @@
 ## 배포 TODO (Week 6)
 
 - [x] `key.properties.example` + 릴리즈 서명 설정 (`app/build.gradle.kts`)
-- [ ] `key.properties` 실제 키스토어 생성 및 연결
-- [ ] Android APK 릴리즈 빌드 확인 (`flutter build apk --release`)
+- [x] `key.properties` 실제 키스토어 생성 및 연결 (`android/app/v-view-release.jks`)
+- [x] Android APK 릴리즈 빌드 확인 (`flutter build apk --release`) → 80MB APK 생성
 - [ ] Firebase App Distribution 테스트 배포
 - [x] `pubspec.yaml` 버전 번호 최종 확인 (`1.0.0+1`)
 

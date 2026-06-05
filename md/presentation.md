@@ -14,7 +14,7 @@ style: |
 # v-view
 ## AI 기반 가상 면접 코칭 앱
 
-**손정협** · Flutter + Claude API · 2026
+**손정협** · Flutter + OpenAI API · 2026
 
 ---
 
@@ -22,10 +22,11 @@ style: |
 
 > 취업 준비생이 혼자서도 실전 면접 연습을 할 수 있는 AI 코칭 앱
 
-- 📋 **AI 맞춤 질문 생성** — 직종·자기소개서 기반 Claude API
+- 📋 **AI 맞춤 질문 생성** — 직종·자기소개서 기반 OpenAI gpt-4o-mini
 - 👁️ **실시간 시선 분석** — ML Kit으로 카메라 응시율 측정
 - 📊 **피드백 리포트** — 시선 지표 + AI 개선 포인트 TOP3
 - 🗂️ **면접 기록 관리** — 히스토리 목록, 상세 재열람, 삭제
+- 🔐 **Firebase Auth 로그인/회원가입** — 이메일 + Firestore 사용자 저장
 
 ---
 
@@ -47,7 +48,8 @@ style: |
 | Framework | Flutter 3.38 | 단일 코드베이스, 카메라·ML 생태계 |
 | State | Riverpod 2.6 | 컴파일타임 안전성, Provider 계층 분리 |
 | Local DB | Hive 2.2 | 스키마리스, 빠른 읽기, 코드젠 불필요 |
-| AI | Claude API | 한국어 품질, JSON 응답 안정성 |
+| AI | OpenAI gpt-4o-mini | 빠른 응답, 한국어 품질, cost efficiency |
+| Auth | Firebase Auth + Firestore | 무서버, 실시간 인증 상태 스트림 |
 | Vision | ML Kit | 온디바이스 처리, 개인정보 보호 |
 
 ---
@@ -91,13 +93,14 @@ GazeMetrics (응시율, 분산 횟수, 분산 시간)
 
 | 대상 | 파일 | 테스트 수 |
 |---|---|---|
-| 시선 분석 | `gaze_analyzer_test.dart` | 9개 |
+| 시선 분석 | `gaze_analyzer_test.dart` | 10개 |
+| 면접 진행 | `interview_notifier_test.dart` | 20개 |
 | 세션 입력 | `session_input_notifier_test.dart` | 7개 |
 | 리포트 상태 | `report_notifier_test.dart` | 7개 |
 | 위젯 | `widget_test.dart` | 1개 |
 
 ```
-flutter test → 25/25 통과
+flutter test → 45/45 통과
 flutter analyze → 이슈 0개
 ```
 
@@ -136,9 +139,10 @@ A. 스키마 마이그레이션 불필요, Map 직렬화로 충분한 단순 구
 
 ## 마무리
 
-- **MVP 6개 기능** 전부 구현 완료
-- `flutter test` 25개 전부 통과
+- **MVP 6개 기능 + Firebase Auth** 구현 완료
+- `flutter test` **45개** 전부 통과
 - `flutter analyze` 이슈 0개
+- 릴리즈 APK 빌드 완료 (`app-release.apk` 80MB)
 - AI Agent와 함께한 바이브 코딩 → `AUTHORING.손정협.md`
 
 **GitHub:** `thswjdguq/v-view`
