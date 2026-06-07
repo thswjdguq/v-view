@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../app.dart' show kSecondaryColor, kErrorColor, kTextColor;
 
 class TimerWidget extends StatelessWidget {
   final int seconds;
@@ -8,22 +9,28 @@ class TimerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isWarning = seconds <= 30;
-    return Row(
-      children: [
-        Icon(
-          Icons.timer,
-          color: isWarning ? Colors.red : Colors.grey,
-          size: 18,
-        ),
-        const SizedBox(width: 4),
-        Text(
-          _format(seconds),
-          style: TextStyle(
-            color: isWarning ? Colors.red : null,
-            fontWeight: isWarning ? FontWeight.bold : null,
+    final color = isWarning ? kErrorColor : kTextColor;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+      decoration: BoxDecoration(
+        color: isWarning ? kErrorColor.withValues(alpha: 0.1) : kSecondaryColor.withValues(alpha: 0.5),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.timer_rounded, color: color, size: 18),
+          const SizedBox(width: 6),
+          Text(
+            _format(seconds),
+            style: TextStyle(
+              color: color,
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

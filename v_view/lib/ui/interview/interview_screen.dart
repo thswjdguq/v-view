@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
+import '../../app.dart' show kPrimaryColor, kSecondaryColor, kTextColor, kSuccessColor;
 import '../../data/remote/gaze/camera_frame_converter.dart';
 import '../../state/interview/interview_provider.dart';
 import '../../state/session_setup/session_setup_provider.dart';
@@ -188,8 +189,17 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
       canPop: false,
       onPopInvokedWithResult: (_, _) => _showExitDialog(context),
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: const Text('모의 면접'),
+          backgroundColor: Colors.white,
+          elevation: 0,
+          leading: IconButton(
+            icon: const Icon(Icons.close_rounded, color: kTextColor),
+            onPressed: () => _showExitDialog(context),
+          ),
+          title: state.phase == InterviewPhase.inProgress
+              ? _ProgressBar(current: state.currentIndex, total: state.questions.length)
+              : Text('모의 면접', style: const TextStyle(color: kTextColor, fontWeight: FontWeight.w800)),
           actions: [
             if (_cameraReady)
               Padding(
@@ -198,7 +208,7 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
               ),
             if (state.phase == InterviewPhase.inProgress)
               IconButton(
-                icon: const Icon(Icons.pause),
+                icon: const Icon(Icons.pause_rounded, color: kTextColor),
                 onPressed: _pauseSession,
               ),
           ],
@@ -228,15 +238,19 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
     final q = state.currentQuestion;
     if (q == null) return const SizedBox.shrink();
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.fromLTRB(24, 8, 24, 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TimerWidget(seconds: state.timerSeconds),
-          const SizedBox(height: 8),
-          _GazeStatusBadge(),
+          Row(
+            children: [
+              TimerWidget(seconds: state.timerSeconds),
+              const SizedBox(width: 8),
+              _GazeStatusBadge(),
+            ],
+          ),
           if (_cameraError) ...[
-            const SizedBox(height: 4),
+            const SizedBox(height: 8),
             _StatusBanner(
               icon: Icons.videocam_off,
               message: '카메라가 켜져있지 않습니다. 시선 분석이 비활성화됩니다.',
@@ -244,55 +258,59 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
             ),
           ],
           if (_micDenied) ...[
-            const SizedBox(height: 4),
+            const SizedBox(height: 8),
             _StatusBanner(
               icon: Icons.mic_off,
               message: '마이크가 켜져있지 않습니다.',
               color: Colors.orange,
             ),
           ],
-          const SizedBox(height: 8),
+          const SizedBox(height: 20),
           QuestionCard(
             question: q,
             index: state.currentIndex,
             total: state.questions.length,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 20),
           Expanded(
-            child: TextField(
-              controller: _answerController,
-              decoration: const InputDecoration(
-                hintText: '답변을 입력하세요...',
-                border: OutlineInputBorder(),
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: kSecondaryColor, width: 2),
               ),
-              maxLines: null,
-              expands: true,
-              textAlignVertical: TextAlignVertical.top,
+              padding: const EdgeInsets.all(4),
+              child: TextField(
+                controller: _answerController,
+                style: const TextStyle(fontSize: 18, color: kTextColor),
+                decoration: const InputDecoration(
+                  hintText: '답변을 입력하세요...',
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.all(16),
+                ),
+                maxLines: null,
+                expands: true,
+                textAlignVertical: TextAlignVertical.top,
+              ),
             ),
           ),
           const SizedBox(height: 16),
           Row(
             children: [
               Expanded(
-                child: OutlinedButton(
-                  onPressed: _showExitDialog,
-                  child: const Text('면접 종료'),
+                flex: 2,
+                child: _OutlineDuoButton(
+                  label: '면접 종료',
+                  onPressed: () => _showExitDialog(context),
                 ),
               ),
               const SizedBox(width: 12),
               Expanded(
-                child: FilledButton(
+                flex: 3,
+                child: _DuoButton(
+                  label: state.isLastQuestion ? '완료' : '다음 질문',
+                  loading: _isSubmitting,
                   onPressed: _isSubmitting ? null : _submitAndNext,
-                  child: _isSubmitting
-                      ? const SizedBox(
-                          width: 18,
-                          height: 18,
-                          child: CircularProgressIndicator(
-                            strokeWidth: 2,
-                            color: Colors.white,
-                          ),
-                        )
-                      : Text(state.isLastQuestion ? '완료' : '다음 질문'),
                 ),
               ),
             ],
@@ -304,21 +322,21 @@ class _InterviewScreenState extends ConsumerState<InterviewScreen>
 
   Widget _buildPausedBody(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Text('면접이 일시정지되었습니다.', style: TextStyle(fontSize: 18)),
-          const SizedBox(height: 24),
-          FilledButton(
-            onPressed: _resumeSession,
-            child: const Text('재개'),
-          ),
-          const SizedBox(height: 12),
-          OutlinedButton(
-            onPressed: _finishSession,
-            child: const Text('종료 및 리포트 보기'),
-          ),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text(
+              '면접이 일시정지되었습니다.',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: kTextColor),
+            ),
+            const SizedBox(height: 24),
+            _DuoButton(label: '재개', onPressed: _resumeSession),
+            const SizedBox(height: 12),
+            _OutlineDuoButton(label: '종료 및 리포트 보기', onPressed: _finishSession),
+          ],
+        ),
       ),
     );
   }
@@ -510,6 +528,116 @@ class _StatusBanner extends StatelessWidget {
             child: Text(message, style: TextStyle(fontSize: 12, color: color)),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Duolingo 스타일 상단 진행률 바 — 초록색 채워지는 애니메이션
+class _ProgressBar extends StatelessWidget {
+  final int current;
+  final int total;
+  const _ProgressBar({required this.current, required this.total});
+
+  @override
+  Widget build(BuildContext context) {
+    final progress = total == 0 ? 0.0 : current / total;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(8),
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: 0, end: progress.clamp(0, 1)),
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeOut,
+        builder: (context, value, _) => LinearProgressIndicator(
+          value: value,
+          minHeight: 12,
+          backgroundColor: kSecondaryColor,
+          valueColor: const AlwaysStoppedAnimation<Color>(kSuccessColor),
+        ),
+      ),
+    );
+  }
+}
+
+/// Duolingo 스타일 큰 CTA 버튼 — 두꺼운 하단 그림자, 누르면 아래로 이동
+class _DuoButton extends StatefulWidget {
+  final String label;
+  final VoidCallback? onPressed;
+  final bool loading;
+
+  const _DuoButton({required this.label, required this.onPressed, this.loading = false});
+
+  @override
+  State<_DuoButton> createState() => _DuoButtonState();
+}
+
+class _DuoButtonState extends State<_DuoButton> {
+  bool _pressed = false;
+
+  static const _shadowColor = Color(0xFF3730A3);
+
+  @override
+  Widget build(BuildContext context) {
+    final enabled = widget.onPressed != null;
+    final bg = enabled ? kPrimaryColor : kSecondaryColor;
+    final shadow = enabled ? _shadowColor : const Color(0xFFB0B0B0);
+    final fg = enabled ? Colors.white : Colors.black45;
+
+    return GestureDetector(
+      onTapDown: enabled ? (_) => setState(() => _pressed = true) : null,
+      onTapUp: enabled ? (_) => setState(() => _pressed = false) : null,
+      onTapCancel: enabled ? () => setState(() => _pressed = false) : null,
+      onTap: widget.onPressed,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 80),
+        width: double.infinity,
+        margin: EdgeInsets.only(top: _pressed ? 4 : 0),
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: bg,
+          borderRadius: BorderRadius.circular(16),
+          border: Border(bottom: BorderSide(color: shadow, width: _pressed ? 0 : 4)),
+        ),
+        child: widget.loading
+            ? const SizedBox(
+                width: 20,
+                height: 20,
+                child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+              )
+            : Text(
+                widget.label,
+                style: TextStyle(color: fg, fontSize: 16, fontWeight: FontWeight.bold),
+              ),
+      ),
+    );
+  }
+}
+
+/// Duolingo 스타일 외곽선 버튼 — 보조 액션
+class _OutlineDuoButton extends StatelessWidget {
+  final String label;
+  final VoidCallback onPressed;
+  const _OutlineDuoButton({required this.label, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(16),
+      onTap: onPressed,
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: kSecondaryColor, width: 2),
+        ),
+        child: Text(
+          label,
+          style: const TextStyle(color: kTextColor, fontSize: 16, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }

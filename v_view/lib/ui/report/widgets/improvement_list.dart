@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../app.dart' show kPrimaryColor, kSecondaryColor, kTextColor;
 import '../../../domain/report/session_report.dart';
 
 class ImprovementList extends StatelessWidget {
@@ -13,9 +14,9 @@ class ImprovementList extends StatelessWidget {
       children: [
         const Text(
           '개선 포인트 TOP3',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18, color: kTextColor),
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 12),
         ...points.asMap().entries.map(
               (e) => _ImprovementItem(
                 rank: e.key + 1,
@@ -35,27 +36,45 @@ class _ImprovementItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 8),
-      child: ListTile(
-        leading: CircleAvatar(
-          radius: 14,
-          child: Text('$rank', style: const TextStyle(fontSize: 12)),
-        ),
-        title: Text(point.title,
-            style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(point.description),
-            const SizedBox(height: 4),
-            Text(
-              '근거: ${point.evidenceMetric}',
-              style: const TextStyle(fontSize: 11, color: Colors.grey),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: kSecondaryColor, width: 2),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 28,
+            height: 28,
+            alignment: Alignment.center,
+            decoration: const BoxDecoration(color: kPrimaryColor, shape: BoxShape.circle),
+            child: Text(
+              '$rank',
+              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: Colors.white),
             ),
-          ],
-        ),
-        isThreeLine: true,
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(point.title,
+                    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: kTextColor)),
+                const SizedBox(height: 4),
+                Text(point.description, style: const TextStyle(fontSize: 14, color: kTextColor, height: 1.4)),
+                const SizedBox(height: 6),
+                Text(
+                  '근거: ${point.evidenceMetric}',
+                  style: const TextStyle(fontSize: 12, color: Colors.black45, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
