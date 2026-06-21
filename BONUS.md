@@ -9,14 +9,14 @@
 | 항목 | 내용 | 상태 | 관련 파일 |
 |---|---|---|---|
 | AI Agent 적극 활용 (+1) | Claude Code 전면 활용 · 커밋 이력 증거 | ✅ 완료 | `git log` |
-| AUTHORING.md (+2) | AI Agent 부트스트래핑 방법론 작성 | ✅ 완료 | `AUTHORING.손정협.md` |
+| AUTHORING.md (+2) | AI Agent 부트스트래핑 방법론 작성 | ✅ 완료 | `AUTHORING.손정효.md` |
 | LLM Wiki 암묵지 관리 (+1) | LLM & Vibe Coding 암묵지 정리 | ✅ 완료 | [WIKI.md](./WIKI.md) |
 | AI Agent 리포트 발표 (+2) | 10분 이상 발표 준비 | ✅ 완료 | `docs/AI-AGENT-REPORT.md` |
-| 라이브 시연 | 실시간 부트스트래핑 데모 준비 | ✅ 스크립트 완성 | `AUTHORING.손정협.md` §10 |
+| 라이브 시연 | 실시간 부트스트래핑 데모 준비 | ✅ 스크립트 완성 | `AUTHORING.손정효.md` §10 |
 
 ---
 
-## AUTHORING.손정협.md 요약
+## AUTHORING.손정효.md 요약
 
 AI Agent(Claude Code)와 협업하여 프로젝트를 부트스트래핑하는 개인 방법론을 정리한 문서입니다.
 

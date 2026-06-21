@@ -75,7 +75,7 @@
 - [x] `docs/SETUP.md` (개발 환경 설정)
 - [x] `docs/DEPLOY.md` (빌드·배포 가이드)
 - [x] `docs/TESTING.md` (테스트 전략)
-- [x] `AUTHORING.손정협.md` (AI Agent 부트스트래핑 방법론)
+- [x] `AUTHORING.손정효.md` (AI Agent 부트스트래핑 방법론)
 - [x] `.planning/decisions/ADR-0001~0003` (발표용 ADR 3종 — 60초 말하기 포함)
 - [x] `LLM-WIKI.md` (Claude Code 바이브 코딩 암묵지 — 보너스 +1)
 
@@ -157,14 +157,14 @@
   - 기술 스택 선택 이유 (ADR 기반)
   - 아키텍처 다이어그램 설명
   - 시연 영상 또는 실기기 데모
-  - AI Agent 활용 방식 (AUTHORING.손정협.md)
+  - AI Agent 활용 방식 (AUTHORING.손정효.md)
 - [x] Q&A 예상 질문 답변 준비
   - "시선 분산 1초 기준을 왜 정했나?"
   - "Riverpod를 선택한 이유는?"
   - "AI 실패 시 어떻게 처리하나?"
   - "레이어 구조에서 ui가 data를 직접 참조하지 않는 이유?"
   - "Hive와 SQLite 차이는?"
-- [x] AUTHORING.손정협.md 기반 라이브 부트스트래핑 시연 준비 (보너스 +2) — §10 시연 스크립트 완성
+- [x] AUTHORING.손정효.md 기반 라이브 부트스트래핑 시연 준비 (보너스 +2) — §10 시연 스크립트 완성
 
 ---
 

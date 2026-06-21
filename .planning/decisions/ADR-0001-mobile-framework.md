@@ -4,7 +4,7 @@
 |------|------|
 | **날짜** | 2026-05-10 |
 | **상태** | 확정 (Accepted) |
-| **작성자** | 손정협 |
+| **작성자** | 손정효 |
 
 ---
 
@@ -48,4 +48,4 @@ v-view는 카메라 기반 시선 분석과 OpenAI gpt-4o-mini 질문 생성을 
 
 > "Flutter를 선택했습니다. 7주 안에 Android/iOS를 동시에 커버해야 했기 때문입니다. React Native와 Android(Kotlin)도 검토했지만, React Native는 ML Kit 연동이 불안정하고 Android는 iOS를 포기해야 해서 Flutter가 유일한 선택이었습니다."
 
-> AI Agent(Claude Code) 초안 생성 / 손정협 직접 검토 확인
+> AI Agent(Claude Code) 초안 생성 / 손정효 직접 검토 확인

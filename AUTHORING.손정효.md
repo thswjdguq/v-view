@@ -1,4 +1,4 @@
-# AUTHORING.손정협.md
+# AUTHORING.손정효.md
 ## AI Agent 부트스트래핑 방법론 — v-view 프로젝트
 
 > 이 파일 하나로 새 저장소에서 Claude Code가
@@ -24,7 +24,7 @@ Claude Code에 이 파일을 제공하면:
 Claude Code에 아래 명령을 입력하면 된다:
 
 ```
-AUTHORING.손정협.md 파일을 읽고,
+AUTHORING.손정효.md 파일을 읽고,
 섹션 4~8의 명세를 기반으로 해당 파일들을 생성해줘.
 기존 파일이 있으면 내용을 비교하고 차이점만 알려줘.
 ```

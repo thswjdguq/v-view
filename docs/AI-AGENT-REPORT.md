@@ -1,7 +1,7 @@
 # AI Agent 활용 보고서
 ## v-view — AI 면접 코치 앱
 
-> 발표자: 손정협  
+> 발표자: 손정효  
 > 발표 시간: 약 10분  
 > 사용 AI Agent: **Claude Code** (Anthropic)
 
@@ -29,7 +29,7 @@
 
 ```
 [기획]          [디자인]            [개발]              [검토]
-Manifest AI  →  Google Stitch  →  Claude Code   →   손정협 (개발자)
+Manifest AI  →  Google Stitch  →  Claude Code   →   손정효 (개발자)
 앱 기획·         UI 화면 디자인       코드·테스트·        전 산출물 검수·
 요구사항          시안 생성           문서 생성           의사결정
 ```
@@ -93,7 +93,7 @@ lib/
 | `docs/ADR/` | Flutter, Riverpod, Hive, OpenAI gpt-4o-mini 선택 근거 |
 | `docs/SETUP.md` | 5분 실행 가이드 (OS별) |
 | `WIKI.md` | LLM & Vibe Coding Wiki (바이브 코딩 암묵지) |
-| `AUTHORING.손정협.md` | 개인 AI Agent 부트스트래핑 방법론 |
+| `AUTHORING.손정효.md` | 개인 AI Agent 부트스트래핑 방법론 |
 
 ---
 
@@ -121,7 +121,7 @@ AI Agent가 완벽하지 않아 **직접 판단해야 했던 사례 3가지**:
 
 ---
 
-## 5. AUTHORING.손정협.md — 나만의 방법론 (1분)
+## 5. AUTHORING.손정효.md — 나만의 방법론 (1분)
 
 7주간 Claude Code와 협업하며 정리한 개인 방법론:
 

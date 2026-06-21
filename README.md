@@ -364,7 +364,7 @@ v-view/
 │   └── pubspec.yaml
 ├── docs/                         # 설계·운영 문서
 │   ├── ARCHITECTURE.md · SETUP.md · DEPLOY.md · TESTING.md
-│   └── ADR/                      # 아키텍처 결정 기록 4건
+│   └── ADR/                      # 아키텍처 결정 기록 5건
 ├── AGENTS.md                     # AI Agent 운용 지침
 ├── CLAUDE.md                     # AI 코딩 원칙
 └── README.md
@@ -448,16 +448,33 @@ v-view/
 
 ## 문서
 
+### 기획 및 요구사항
+| 문서 | 설명 |
+|---|---|
+| [기능명세서 (요구사항)](md/AI%20기반%20가상%20면접%20코칭%20앱%20v-view_기능명세서_2026-05-10.md) | 기획서 · MVP 기능 요구사항 정의 |
+| [WBS / 일정](md/WBS.md) | 8주 작업 분류 체계(WBS) 및 마일스톤 일정 |
+| [.planning/](\.planning/) | 비전·요구사항·리스크 기획 문서 모음 |
+
+### 설계 및 아키텍처
+| 문서 | 설명 |
+|---|---|
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | 시스템 아키텍처 설계 |
+| [docs/ADR/](docs/ADR/) | 아키텍처 결정 기록(ADR) 5건 |
+
+### 개발 환경 · 빌드 · 배포 · 테스트
 | 문서 | 설명 |
 |---|---|
 | [docs/SETUP.md](docs/SETUP.md) | 개발 환경 설정 + 트러블슈팅 FAQ |
 | [docs/DEPLOY.md](docs/DEPLOY.md) | 빌드·서명·배포 가이드 |
-| [docs/TESTING.md](docs/TESTING.md) | 테스트 전략 상세 |
-| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | 시스템 설계 |
-| [docs/ADR/](docs/ADR/) | 아키텍처 결정 기록 4건 (원본) |
-| [AGENTS.md](AGENTS.md) | AI Agent 운용 지침 |
-| [CLAUDE.md](CLAUDE.md) | AI 코딩 원칙 |
-| [WIKI.md](WIKI.md) | LLM & Vibe Coding Wiki (암묵지·트러블슈팅·성능 최적화) |
+| [docs/TESTING.md](docs/TESTING.md) | 단위 테스트·통합 테스트 전략 |
+
+### AI Agent 운용
+| 문서 | 설명 |
+|---|---|
+| [AGENTS.md](AGENTS.md) | AI Agent 워크플로우·Rules·Skills·Commands 통합 지침 |
+| [AUTHORING.손정효.md](AUTHORING.손정효.md) | 나만의 AI Agent 부트스트래핑 방법론 |
+| [WIKI.md](WIKI.md) | LLM & Vibe Coding Wiki — 암묵지·트러블슈팅·성능 최적화 |
+| [CLAUDE.md](CLAUDE.md) | AI 코딩 원칙 (Agent 시스템 프롬프트) |
 
 ---
 

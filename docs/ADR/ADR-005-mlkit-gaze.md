@@ -46,4 +46,4 @@ v-view의 핵심 기능은 면접 중 카메라 프레임에서 사용자의 얼
 > 향후 정확도 개선이 필요하면 ML Kit → MediaPipe 교체가 가능하며,
 > 비전 로직이 Data 레이어에 격리되어 있어 `data/remote/gaze/`만 교체하면 된다.
 >
-> AI Agent(Claude Code) 초안 생성 / 손정협 직접 검토 확인
+> AI Agent(Claude Code) 초안 생성 / 손정효 직접 검토 확인

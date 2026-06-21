@@ -7,7 +7,7 @@
 > 이 **LLM Wiki**는 "한 번 겪은 문제는 두 번 디버깅하지 않는다"는 원칙으로 운영됩니다.
 
 > **AI 도구 체인**: 기획은 **Manifest AI**, 디자인은 **Google Stitch**, 개발은 **Claude Code**로 수행하고,
-> 모든 산출물은 **개발자(손정협)가 직접 검토**하는 Human-in-the-Loop 방식이다.
+> 모든 산출물은 **개발자(손정효)가 직접 검토**하는 Human-in-the-Loop 방식이다.
 > (단계별 상세: [AGENTS.md](AGENTS.md) §1.0)
 
 ---
@@ -334,4 +334,4 @@ box.put(id, {'gazeRate': metrics.gazeRate, ...});
 > 성능 최적화(Performance Optimization) 경험은 그때그때 누적해 **암묵지를 형식지로 전환**한다.
 >
 > 관련 문서: [AGENTS.md](AGENTS.md) · [CLAUDE.md](CLAUDE.md) · [README.md](README.md)
-> 작성·통합: 손정협 (구 `LLM-WIKI.md` 통합본)
+> 작성·통합: 손정효 (구 `LLM-WIKI.md` 통합본)

@@ -118,6 +118,35 @@ genhtml coverage/lcov.info -o coverage/html
 
 ---
 
+## 통합 테스트 (Integration Test)
+
+통합 테스트는 실기기 또는 에뮬레이터에서 앱 전체 E2E 흐름을 검증합니다.
+
+### 위치
+```
+v_view/integration_test/app_test.dart
+```
+
+### 테스트 시나리오
+| 시나리오 | 검증 내용 |
+|---|---|
+| 앱 시작 | MaterialApp 렌더링 확인 |
+| 인증 화면 | 이메일·비밀번호 입력란 존재 여부 |
+
+### 실행 방법
+```bash
+# 에뮬레이터 또는 실기기 연결 후
+flutter test integration_test/app_test.dart -d <device_id>
+
+# 에뮬레이터 ID 확인
+flutter devices
+```
+
+> **참고**: 통합 테스트는 실기기/에뮬레이터 환경이 필요합니다.
+> Firebase 초기화가 포함되므로 `.env`(OPENAI_API_KEY) 설정 후 실행하세요.
+
+---
+
 ## CI에서 테스트 실행 (GitHub Actions 예시)
 
 ```yaml

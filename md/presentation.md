@@ -14,7 +14,7 @@ style: |
 # v-view
 ## AI 기반 가상 면접 코칭 앱
 
-**손정협** · Flutter + OpenAI API · 2026
+**손정효** · Flutter + OpenAI API · 2026
 
 ---
 
@@ -117,7 +117,7 @@ flutter analyze → 이슈 0개
 
 > "AI가 코드를 짜고, 사람이 방향을 결정한다"
 
-*자세한 방법론: `AUTHORING.손정협.md`*
+*자세한 방법론: `AUTHORING.손정효.md`*
 
 ---
 
@@ -143,7 +143,7 @@ A. 스키마 마이그레이션 불필요, Map 직렬화로 충분한 단순 구
 - `flutter test` **45개** 전부 통과
 - `flutter analyze` 이슈 0개
 - 릴리즈 APK 빌드 완료 (`app-release.apk` 80MB)
-- AI Agent와 함께한 바이브 코딩 → `AUTHORING.손정협.md`
+- AI Agent와 함께한 바이브 코딩 → `AUTHORING.손정효.md`
 
 **GitHub:** `thswjdguq/v-view`
 
