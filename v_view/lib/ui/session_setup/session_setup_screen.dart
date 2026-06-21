@@ -2,14 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../theme/app_theme.dart';
 import '../../state/session_setup/session_setup_provider.dart';
+import '../../state/interview/interview_provider.dart';
+import '../../state/gaze/gaze_provider.dart';
 import 'session_confirm_screen.dart';
 import 'widgets/interview_type_selector.dart';
 
-class SessionSetupScreen extends ConsumerWidget {
+class SessionSetupScreen extends ConsumerStatefulWidget {
   const SessionSetupScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SessionSetupScreen> createState() =>
+      _SessionSetupScreenState();
+}
+
+class _SessionSetupScreenState extends ConsumerState<SessionSetupScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // 새 세션 진입 — 이전 입력(자소서·직무)/질문/시선 데이터 초기화 (기록은 유지)
+    ref.read(sessionInputProvider.notifier).reset();
+    ref.read(interviewProvider.notifier).reset();
+    ref.read(gazeProvider.notifier).reset();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final input = ref.watch(sessionInputProvider);
     final notifier = ref.read(sessionInputProvider.notifier);
 

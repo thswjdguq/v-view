@@ -7,6 +7,7 @@ import '../../domain/interview/interview_question.dart';
 import '../../domain/report/session_report.dart';
 import '../../domain/session_setup/session_input.dart';
 import '../../state/gaze/gaze_provider.dart';
+import '../../state/history/history_provider.dart';
 import '../../state/interview/interview_provider.dart';
 import '../../state/report/report_provider.dart';
 import '../../state/session_setup/session_setup_provider.dart';
@@ -25,7 +26,7 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) => _generateReport());
   }
 
-  void _generateReport() {
+  Future<void> _generateReport() async {
     final interviewState = ref.read(interviewProvider);
     final gazeState = ref.read(gazeProvider);
     final sessionInput = ref.read(sessionInputProvider);
@@ -41,7 +42,7 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
       );
     }).toList();
 
-    ref.read(reportProvider.notifier).generate(
+    await ref.read(reportProvider.notifier).generate(
           interviewType: sessionInput.type,
           position: sessionInput.position,
           company: sessionInput.company,
@@ -49,6 +50,9 @@ class _ReportScreenState extends ConsumerState<ReportScreen> {
           gazeMetrics: gazeMetrics,
           totalDurationSeconds: interviewState.elapsedSeconds,
         );
+
+    // generate()가 기록을 Hive에 저장하므로 히스토리 목록을 새로고침
+    if (mounted) ref.read(historyProvider.notifier).load();
   }
 
   Future<void> _copyToClipboard(
