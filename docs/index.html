@@ -22,8 +22,10 @@
   #viewport{position:fixed;inset:0;display:grid;place-items:center;}
   #stage{width:1280px;height:720px;position:relative;transform-origin:center center;background:var(--bg);overflow:hidden;}
 
-  .slide{position:absolute;inset:0;padding:54px 70px;background:var(--bg);opacity:0;visibility:hidden;transition:opacity .45s ease;display:flex;flex-direction:column;}
+  .slide{position:absolute;inset:0;padding:48px 70px;background:var(--bg);opacity:0;visibility:hidden;transition:opacity .45s ease;display:flex;flex-direction:column;}
   .slide.active{opacity:1;visibility:visible;}
+  .slide-body{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:20px;}
+  .slide-body>*{flex:0 0 auto;}
   .slide.active .anim{animation:rise .6s cubic-bezier(.2,.7,.25,1) both;}
   .slide.active .anim:nth-child(2){animation-delay:.06s;}
   .slide.active .anim:nth-child(3){animation-delay:.12s;}
@@ -38,7 +40,7 @@
   .lead{font-size:24px;line-height:1.6;color:var(--ink-soft);font-weight:500;}
   .kicker{font-size:21px;font-weight:700;color:var(--mint-deep);letter-spacing:.01em;}
 
-  .slide-head{margin-bottom:30px;}
+  .slide-head{margin-bottom:24px;}
   .slide-head .eyebrow{margin-bottom:15px;}
   .qa-tag{position:absolute;top:38px;right:70px;font-size:14px;font-weight:800;letter-spacing:.14em;color:var(--mint-deep);background:var(--panel-2);padding:8px 16px;border-radius:999px;text-transform:uppercase;}
 
@@ -606,6 +608,20 @@ flutter run</pre>
 const stage=document.getElementById('stage');
 stage.innerHTML=slides.join('');
 const all=[...document.querySelectorAll('.slide')];
+
+/* 각 슬라이드 본문을 머리말·꼬리말 사이 공간을 채우도록 래핑 (표지/마무리 제외) */
+all.forEach(slide=>{
+  if(slide.classList.contains('cover')||slide.classList.contains('closing')) return;
+  const fn=slide.querySelector('.footnote');
+  const body=document.createElement('div');
+  body.className='slide-body';
+  [...slide.children].forEach(k=>{
+    if(k.classList.contains('qa-tag')||k.classList.contains('slide-head')||k.classList.contains('footnote')) return;
+    body.appendChild(k);
+  });
+  if(fn) slide.insertBefore(body,fn); else slide.appendChild(body);
+});
+
 const total=all.length;
 let idx=0;
 document.getElementById('total').textContent=total;
