@@ -1,295 +1,70 @@
-# v-view 개발 환경 설정 가이드
+# 실행 환경 설정
 
-> 이 문서만 따라하면 **5분 안에** 앱을 실행할 수 있다.
+2026-11-11 변경 기준. 현재는 [개인 PC의 GPT 키로 실행](LOCAL-AI.md)한다. 앱 `.env` 자산·앱의 직접 키 사용은 하지 않는다.
 
----
+## 개발 도구
 
-## 1. 필요한 도구 버전
+- 기준: Flutter 3.38.9, Dart 3.10.8, Windows, Android SDK.
+- 서버: Node.js 22 이상. 로컬 확인은 Node.js 24.14.0.
+- Android 기기 또는 에뮬레이터. iOS는 macOS에서 별도 검증해야 한다.
 
-| 도구 | 최소 버전 | 버전 확인 명령 |
-|---|---|---|
-| Flutter SDK | 3.x stable | `flutter --version` |
-| Dart | 3.x | `dart --version` |
-| JDK | 17 | `java -version` |
-| Android SDK | API 21 (Android 5.0) | Android Studio → SDK Manager |
-| Git | 2.x | `git --version` |
-| Xcode (macOS만) | 15 이상 | `xcode-select --version` |
+## 포트폴리오 데모
 
-모든 도구가 설치됐는지 한 번에 확인:
-
-```bash
-flutter doctor
-```
-
-모든 항목이 `[✓]`이어야 한다. `[!]` 항목이 있으면 아래 FAQ를 먼저 확인할 것.
-
----
-
-## 2. 저장소 클론
-
-```bash
-git clone https://github.com/thswjdguq/v-view.git
-cd v-view/v_view
-```
-
----
-
-## 3. 의존성 설치
-
-```bash
+```sh
+cd v_view
 flutter pub get
+flutter run -t lib/main_demo.dart
 ```
 
-성공 시 `Got dependencies!` 메시지가 출력된다.
+Firebase·AI 키 없이 실행한다. 가상 리포트 2개와 샘플 질문·피드백을 사용하며 화면 상단에 DEMO를 표시한다.
+카메라·마이크·외부 AI는 호출하지 않는다. 작성한 텍스트는 데모 전용 Hive 저장소에 남는다.
+홈의 ‘샘플 기록 다시 넣기’는 사용자가 작성한 새 기록을 삭제하지 않고 샘플 2개를 복원한다.
 
----
+이 개발 환경의 Android 에뮬레이터에서는 그래픽·시스템 UI 응답 지연이 있어 소프트웨어 렌더링으로 시각 검증했다. 같은 환경에서 검은 화면이 보이면 다음과 같이 확인할 수 있다. 실제 휴대폰의 일반 실행 검증과는 구분한다.
 
-## 4. .env 설정 (API 키)
-
-> **중요**: `.env`는 `.gitignore`에 포함되어 있어 절대 커밋되지 않는다.
-> API 키를 코드에 직접 입력하는 방법은 사용하지 않는다.
-
-### 4-1. .env 파일 생성
-
-**macOS / Linux**
-```bash
-cp .env.example .env
+```sh
+flutter run -t lib/main_demo.dart --enable-software-rendering --no-enable-impeller
 ```
 
-**Windows (PowerShell)**
-```powershell
-Copy-Item .env.example .env
+## 실제 앱
+
+현재 실행은 `server/`에서 `npm run local:setup` → `npm start`, 저장소 루트의 다른 창에서 `scripts/Run-LocalAndroid.ps1`이다. Firebase 로그인 없이 `main_local.dart`로 시작한다. 자세한 기기 연결과 오류 안내는 [로컬 AI](LOCAL-AI.md)를 따른다.
+
+### 기존 Firebase 진입점 — 현재 사용하지 않음
+
+1. Firebase 설정이 사용할 프로젝트와 일치하는지 확인한다. 다른 프로젝트라면 FlutterFire 도구로 다시 설정한다.
+2. Firebase 이메일 인증을 활성화하고 테스트 계정을 만든다.
+3. [중계 서버](../server/README.md)를 준비한다. API 키는 서버에만 설정한다.
+4. 테스트 계정 UID를 서버 `ALLOWED_FIREBASE_UIDS`에 추가한다.
+5. 다음 옵션으로 앱을 실행한다.
+
+```sh
+cd v_view
+flutter run --dart-define=AI_PROXY_URL=https://YOUR-SERVER.example/v1
 ```
 
-### 4-2. .env 파일 내용
+Firebase ID 토큰은 로그인 사용자에게서 매 요청 시 얻어 전달하며 서버에서 검증한다.
+배포 앱은 HTTPS를 사용한다. 디버그 코드는 localhost·127.0.0.1·10.0.2.2의 HTTP 주소만 추가 허용하지만 플랫폼 자체의 HTTP 정책도 적용된다. 로컬 서버도 HTTPS 터널로 연결하는 방식을 권장한다.
 
-`.env.example`의 내용:
-```
-OPENAI_API_KEY=your_api_key_here
-```
+## 오류 확인
 
-`.env`를 열고 `your_api_key_here` 부분을 실제 키로 교체한다:
-```
-OPENAI_API_KEY=sk-proj-...
-```
-
-### 4-3. API 키 발급 방법
-
-1. [platform.openai.com](https://platform.openai.com/) 접속
-2. 로그인 → **API Keys** 메뉴
-3. **Create Key** → 키 복사
-4. `.env`에 붙여넣기
-
----
-
-## 5. 앱 실행
-
-### 연결된 디바이스 확인
-
-```bash
-flutter devices
-```
-
-### 실행
-
-```bash
-# 기본 실행 (디버그 모드, 핫 리로드 지원)
-flutter run
-
-# 디바이스가 여러 개일 때 지정
-flutter run -d <device-id>
-```
-
-**플랫폼별 실행 방법:**
-
-| 플랫폼 | 방법 |
+| 안내 | 확인할 내용 |
 |---|---|
-| Android 에뮬레이터 | Android Studio에서 AVD 실행 후 `flutter run` |
-| Android 실기기 | USB 연결 + USB 디버깅 활성화 후 `flutter run` |
-| iOS 시뮬레이터 (macOS만) | `open -a Simulator` 후 `flutter run` |
-| iOS 실기기 (macOS만) | Xcode에서 서명 설정 후 `flutter run` |
+| AI_PROXY_URL 미설정 | 실행 옵션 지정 후 앱을 다시 실행. hot reload만으로 빌드 설정은 바뀌지 않음 |
+| 로그인 인증 실패 | 로그인 상태·Firebase 프로젝트·토큰 검증 설정 |
+| 시범 운영 대상 계정 | 허용 목록 UID |
+| 요청이 많음 | 시간당·동시 요청 제한. 기다린 뒤 재시도 |
+| 음성 인식 불가 | 한국어 지원 서비스·인터넷·마이크 권한 |
+| 시선 측정 불가 | 카메라 권한·조명·얼굴 검출 환경. 0점으로 해석하지 않음 |
+| 서버 502/504 | 네트워크·키·제공자 상태·25초 제한. 키·토큰·프롬프트를 로그에 출력하지 않음 |
 
-> **카메라 기능**: 에뮬레이터/시뮬레이터에서는 카메라가 제한된다.
-> 시선 분석을 테스트하려면 실기기를 사용할 것.
+## 검증
 
----
-
-## 6. 자주 발생하는 오류 FAQ
-
----
-
-### FAQ 1 — Android SDK 경로를 찾을 수 없다
-
-**오류 메시지**
-```
-Android SDK not found. Define location with an ANDROID_SDK_ROOT environment variable.
+```sh
+cd v_view
+flutter test --no-pub --reporter expanded
+flutter analyze --no-pub
 ```
 
-**원인**: `flutter doctor`가 Android SDK 위치를 인식하지 못함
-
-**해결**
-
-**Windows (PowerShell)**
-```powershell
-# 환경 변수 설정 (Android Studio 기본 경로)
-[System.Environment]::SetEnvironmentVariable(
-  "ANDROID_SDK_ROOT",
-  "$env:LOCALAPPDATA\Android\Sdk",
-  "User"
-)
-# 터미널 재시작 후 확인
-flutter doctor --android-licenses
-```
-
-**macOS / Linux**
-```bash
-# .zshrc 또는 .bashrc에 추가
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk   # macOS
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk            # Linux
-export PATH=$PATH:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools
-
-source ~/.zshrc   # 적용
-flutter doctor --android-licenses
-```
-
----
-
-### FAQ 2 — iOS 시뮬레이터가 뜨지 않는다 (macOS)
-
-**오류 메시지**
-```
-No supported devices found with name or id matching 'iPhone'.
-```
-
-**원인**: Xcode 설치 또는 시뮬레이터 런타임 누락
-
-**해결**
-```bash
-# Xcode Command Line Tools 설치
-xcode-select --install
-
-# 시뮬레이터 직접 실행
-open -a Simulator
-
-# 런타임이 없으면 Xcode → Settings → Platforms에서 iOS 런타임 추가
-
-# 이후 실행
-flutter run
-```
-
----
-
-### FAQ 3 — 카메라 권한 오류로 앱이 멈춘다
-
-**증상**: 앱 실행 후 카메라 화면에서 검은 화면 또는 즉시 종료
-
-**Android 해결**
-
-`android/app/src/main/AndroidManifest.xml`에 아래 두 줄이 있는지 확인:
-```xml
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name="android.permission.INTERNET" />
-```
-
-없으면 `<manifest>` 태그 바로 아래에 추가한다.
-
-**iOS 해결**
-
-`ios/Runner/Info.plist`에 아래가 있는지 확인:
-```xml
-<key>NSCameraUsageDescription</key>
-<string>시선 분석을 위해 카메라가 필요합니다. 원본 영상은 저장되지 않습니다.</string>
-```
-
-없으면 `<dict>` 태그 안에 추가한다.
-
-**공통**: 이미 권한을 거부했다면 기기 설정 → 앱 → v-view → 카메라 권한 허용
-
----
-
-### FAQ 4 — API 키 누락으로 질문이 생성되지 않는다
-
-**오류 메시지** (디버그 콘솔)
-```
-DioException: 401 Unauthorized
-또는
-flutter_dotenv: OPENAI_API_KEY is not set
-```
-
-**체크리스트** (순서대로 확인)
-
-1. `v_view/` 안에 `.env` 파일이 존재하는지 확인
-   ```bash
-   # macOS/Linux
-   ls -a v_view/ | grep .env
-   # Windows
-   Get-ChildItem -Hidden v_view\ | Where-Object Name -like ".env*"
-   ```
-
-2. `.env` 파일 안에 키가 올바르게 입력됐는지 확인 (앞뒤 공백·따옴표 없어야 함)
-   ```
-   OPENAI_API_KEY=sk-proj-...   ← 올바름
-   OPENAI_API_KEY="sk-proj-..." ← 잘못됨 (따옴표 제거)
-   OPENAI_API_KEY= sk-proj-...       ← 잘못됨 (앞 공백 제거)
-   ```
-
-3. `pubspec.yaml`의 `flutter.assets`에 `.env`가 포함됐는지 확인
-   ```yaml
-   flutter:
-     assets:
-       - .env
-   ```
-
-4. 위 3가지 모두 정상이면 `flutter clean && flutter pub get && flutter run`
-
----
-
-### FAQ 5 — 빌드 실패 (Build failed)
-
-**증상 A — Gradle 빌드 실패 (Android)**
-```
-FAILURE: Build failed with an exception.
-Execution failed for task ':app:compileDebugKotlin'.
-```
-
-**해결**
-```bash
-cd android
-./gradlew clean        # macOS/Linux
-gradlew.bat clean      # Windows
-cd ..
-flutter run
-```
-
-그래도 실패하면:
-```bash
-flutter clean
-flutter pub get
-flutter run
-```
-
-**증상 B — CocoaPods 오류 (iOS / macOS)**
-```
-[!] CocoaPods could not find compatible versions for pod "GoogleMLKit/FaceDetection"
-```
-
-**해결**
-```bash
-cd ios
-pod deintegrate
-pod install
-cd ..
-flutter run
-```
-
-**증상 C — minSdkVersion 오류 (Android)**
-```
-uses-sdk:minSdkVersion 16 cannot be smaller than version 21 declared in library
-```
-
-**해결**: `android/app/build.gradle` (또는 `build.gradle.kts`)에서 확인:
-```kotlin
-defaultConfig {
-    minSdk = 21   // 이 값이 21 이상이어야 함
-}
-```
+[기기 시연 순서](PORTFOLIO-READY.md)와 서버 테스트도 확인한다.
+이전 앱 `.env`는 사용하지 않으며 `pubspec.yaml` 자산에 다시 추가하지 않는다.

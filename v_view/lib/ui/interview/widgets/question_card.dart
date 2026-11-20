@@ -19,8 +19,11 @@ class QuestionCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        Wrap(
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          spacing: 8,
+          runSpacing: 6,
           children: [
             Text(
               '질문 ${index + 1} / $total',
@@ -31,16 +34,26 @@ class QuestionCard extends StatelessWidget {
               ),
             ),
             if (question.isFollowUp) ...[
-              const SizedBox(width: 8),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 4,
+                ),
                 decoration: BoxDecoration(
                   color: kPrimaryColor.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Text(
-                  '꼬리 질문',
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: kPrimaryColor),
+                child: Text(
+                  question.followUpKind == FollowUpKind.challenge
+                      ? '근거 확인 질문'
+                      : question.followUpKind == FollowUpKind.clarification
+                      ? '추가 확인 질문'
+                      : '꼬리 질문',
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    color: kPrimaryColor,
+                  ),
                 ),
               ),
             ],
@@ -57,6 +70,14 @@ class QuestionCard extends StatelessWidget {
             height: 1.35,
           ),
         ),
+        if (question.followUpReason != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 12),
+            child: Text(
+              '추가 질문 이유: ${question.followUpReason}',
+              style: const TextStyle(fontSize: 13),
+            ),
+          ),
       ],
     );
   }

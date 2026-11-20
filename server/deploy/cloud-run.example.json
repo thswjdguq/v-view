@@ -1,0 +1,8 @@
+{
+  "projectId": "example-vview-project",
+  "region": "asia-northeast3",
+  "serviceName": "v-view-ai",
+  "runtimeAccount": "v-view-ai-runtime",
+  "openAiSecret": { "name": "v-view-openai-api-key", "version": "1" },
+  "allowedUsersSecret": { "name": "v-view-allowed-firebase-uids", "version": "1" }
+}

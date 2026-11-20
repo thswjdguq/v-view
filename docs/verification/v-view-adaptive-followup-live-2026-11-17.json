@@ -1,0 +1,59 @@
+{
+  "verifiedAt": "2026-11-17T01:41:59.325838Z",
+  "scope": "Synthetic inputs; actual GPT API responses over the PC loopback service. This is a small scenario check, not a measured accuracy rate.",
+  "requests": 4,
+  "results": [
+    {
+      "case": "충분한 답변",
+      "question": "중복 제출 오류의 재발을 어떻게 확인했나요?",
+      "syntheticAnswer": "같은 버튼을 빠르게 두 번 눌러도 저장 레코드가 한 개이고 API 요청도 한 번만 발생하는지 자동 테스트로 확인했습니다.",
+      "expected": "none",
+      "actual": "none",
+      "matched": true,
+      "followUp": null
+    },
+    {
+      "case": "본인 역할 누락",
+      "question": "팀 프로젝트에서 본인이 직접 맡은 역할은 무엇인가요?",
+      "syntheticAnswer": "팀이 같이 잘했고 서비스도 잘됐습니다.",
+      "expected": "clarification",
+      "actual": "clarification",
+      "matched": true,
+      "followUp": {
+        "id": "fu_d7aec39c-c035-4323-aaf6-c47075be89fb",
+        "text": "이 프로젝트에서 본인이 맡은 구체적인 역할이나 기여를 말씀해 주실 수 있나요?",
+        "intent": "개인 기여 확인",
+        "isFollowUp": true,
+        "parentQuestionId": "role",
+        "followUpKind": "clarification",
+        "followUpReason": "아직 확인할 핵심 쟁점",
+        "followUpEvidence": "팀이 같이 잘했고 서비스도 잘됐습니다."
+      }
+    },
+    {
+      "case": "명백한 역할 모순",
+      "question": "API와 서버 구현은 누가 맡았나요?",
+      "syntheticAnswer": "API와 서버도 제가 혼자 전부 구현했습니다.",
+      "expected": "challenge",
+      "actual": "challenge",
+      "matched": true,
+      "followUp": {
+        "id": "fu_58e3acaf-c9f6-408c-9b0e-54a1f7244bdd",
+        "text": "어떻게 화면 디자인을 맡으면서 API와 서버도 혼자 전부 구현했다고 말씀하셨나요?",
+        "intent": "근거 확인",
+        "isFollowUp": true,
+        "parentQuestionId": "claim",
+        "followUpKind": "challenge",
+        "followUpReason": "주장과 앞선 답변의 명백한 모순이 존재함",
+        "followUpEvidence": "저는 화면 디자인만 했고 API와 서버는 팀원이 구현했습니다."
+      }
+    },
+    {
+      "case": "모순 해소 후 종료",
+      "expected": "none",
+      "actual": "error",
+      "matched": false,
+      "error": "AI 응답 형식이 올바르지 않습니다. 다시 시도해주세요."
+    }
+  ]
+}

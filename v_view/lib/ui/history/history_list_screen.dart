@@ -4,12 +4,16 @@ import 'package:intl/intl.dart';
 import 'package:animate_do/animate_do.dart';
 import '../../theme/app_theme.dart';
 import '../../state/history/history_provider.dart';
-import '../../state/auth/auth_provider.dart' show authStateProvider, authNotifierProvider;
+import '../../state/app_mode_provider.dart';
+import '../../state/auth/auth_provider.dart'
+    show authStateProvider, authNotifierProvider;
 import '../../domain/history/session_history.dart';
+import '../../domain/gaze/gaze_metrics.dart';
 import '../../domain/session_setup/session_input.dart';
 import '../../state/report/report_provider.dart';
 import '../session_setup/session_setup_screen.dart';
 import 'history_detail_screen.dart';
+import 'widgets/delete_record_dialog.dart';
 
 class HistoryListScreen extends ConsumerWidget {
   const HistoryListScreen({super.key});
@@ -22,8 +26,8 @@ class HistoryListScreen extends ConsumerWidget {
     final firstName = userName.contains('@')
         ? userName.split('@').first
         : userName.isNotEmpty
-            ? userName
-            : '면접러';
+        ? userName
+        : '면접러';
 
     return Scaffold(
       backgroundColor: AppColors.surface,
@@ -46,33 +50,37 @@ class HistoryListScreen extends ConsumerWidget {
               tooltip: '전체 삭제',
               onPressed: () => _confirmDeleteAll(context, ref),
             ),
-          PopupMenuButton<String>(
-            icon: const Icon(Icons.account_circle_outlined),
-            tooltip: '계정',
-            itemBuilder: (_) => [
-              if (userName.isNotEmpty)
-                PopupMenuItem(
-                  enabled: false,
-                  child: Text(userName,
-                      style: const TextStyle(fontWeight: FontWeight.bold)),
+          if (!ref.watch(isDemoModeProvider) &&
+              !ref.watch(isLocalAiModeProvider))
+            PopupMenuButton<String>(
+              icon: const Icon(Icons.account_circle_outlined),
+              tooltip: '계정',
+              itemBuilder: (_) => [
+                if (userName.isNotEmpty)
+                  PopupMenuItem(
+                    enabled: false,
+                    child: Text(
+                      userName,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                const PopupMenuItem(
+                  value: 'signout',
+                  child: Row(
+                    children: [
+                      Icon(Icons.logout, size: 18),
+                      SizedBox(width: 8),
+                      Text('로그아웃'),
+                    ],
+                  ),
                 ),
-              const PopupMenuItem(
-                value: 'signout',
-                child: Row(
-                  children: [
-                    Icon(Icons.logout, size: 18),
-                    SizedBox(width: 8),
-                    Text('로그아웃'),
-                  ],
-                ),
-              ),
-            ],
-            onSelected: (val) {
-              if (val == 'signout') {
-                ref.read(authNotifierProvider.notifier).signOut();
-              }
-            },
-          ),
+              ],
+              onSelected: (val) {
+                if (val == 'signout') {
+                  ref.read(authNotifierProvider.notifier).signOut();
+                }
+              },
+            ),
         ],
       ),
       body: CustomScrollView(
@@ -97,8 +105,11 @@ class HistoryListScreen extends ConsumerWidget {
                             color: AppColors.surfaceContainer,
                             shape: BoxShape.circle,
                           ),
-                          child: Icon(Icons.mic_none_rounded,
-                              size: 36, color: AppColors.primaryContainer),
+                          child: Icon(
+                            Icons.mic_none_rounded,
+                            size: 36,
+                            color: AppColors.primaryContainer,
+                          ),
                         ),
                         const SizedBox(height: 20),
                         Text(
@@ -154,25 +165,11 @@ class HistoryListScreen extends ConsumerWidget {
   }
 
   void _confirmDeleteAll(BuildContext context, WidgetRef ref) {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('전체 삭제'),
-        content: const Text('모든 면접 기록을 삭제합니다. 되돌릴 수 없습니다.'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('취소'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              ref.read(historyProvider.notifier).deleteAll();
-            },
-            child: const Text('전체 삭제'),
-          ),
-        ],
-      ),
+    showRecordDeletionDialog(
+      context,
+      title: '전체 삭제',
+      description: '저장된 모든 질문·답변과 리포트를 삭제합니다. 되돌릴 수 없습니다.',
+      onDelete: ref.read(historyProvider.notifier).deleteAll,
     );
   }
 }
@@ -206,18 +203,21 @@ class _GreetingHeader extends StatelessWidget {
           if (count > 0) ...[
             const SizedBox(height: 16),
             Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
                 color: AppColors.primaryContainer.withValues(alpha: 0.12),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                    color: AppColors.primaryContainer.withValues(alpha: 0.3)),
+                  color: AppColors.primaryContainer.withValues(alpha: 0.3),
+                ),
               ),
               child: Row(
                 children: [
-                  Icon(Icons.emoji_events_rounded,
-                      color: AppColors.primaryContainer, size: 20),
+                  Icon(
+                    Icons.emoji_events_rounded,
+                    color: AppColors.primaryContainer,
+                    size: 20,
+                  ),
                   const SizedBox(width: 10),
                   Text(
                     '총 $count회 연습 완료',
@@ -265,8 +265,8 @@ class _HistoryCard extends ConsumerWidget {
     final gazeColor = gazeRate >= 70
         ? AppColors.primaryContainer
         : gazeRate >= 40
-            ? const Color(0xFFFF9600)
-            : AppColors.secondaryContainer;
+        ? const Color(0xFFFF9600)
+        : AppColors.secondaryContainer;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
@@ -294,9 +294,9 @@ class _HistoryCard extends ConsumerWidget {
               ),
             );
           } else {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(content: Text('리포트를 불러올 수 없습니다.')),
-            );
+            ScaffoldMessenger.of(
+              context,
+            ).showSnackBar(const SnackBar(content: Text('리포트를 불러올 수 없습니다.')));
           }
         },
         onLongPress: () => _confirmDelete(context, ref),
@@ -312,10 +312,13 @@ class _HistoryCard extends ConsumerWidget {
                       children: [
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 8, vertical: 3),
+                            horizontal: 8,
+                            vertical: 3,
+                          ),
                           decoration: BoxDecoration(
-                            color: AppColors.primaryContainer
-                                .withValues(alpha: 0.15),
+                            color: AppColors.primaryContainer.withValues(
+                              alpha: 0.15,
+                            ),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -345,7 +348,9 @@ class _HistoryCard extends ConsumerWidget {
                     Text(
                       dateStr,
                       style: TextStyle(
-                          fontSize: 13, color: AppColors.onSurfaceVariant),
+                        fontSize: 13,
+                        color: AppColors.onSurfaceVariant,
+                      ),
                     ),
                   ],
                 ),
@@ -355,7 +360,9 @@ class _HistoryCard extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Text(
-                    '${gazeRate.toStringAsFixed(0)}%',
+                    item.gazeQuality == GazeQuality.unavailable
+                        ? '측정 불가'
+                        : '${gazeRate.toStringAsFixed(0)}%',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.w900,
@@ -363,9 +370,13 @@ class _HistoryCard extends ConsumerWidget {
                     ),
                   ),
                   Text(
-                    '응시율',
+                    item.gazeQuality == GazeQuality.reference
+                        ? '응시율 · 참고용'
+                        : '응시율',
                     style: TextStyle(
-                        fontSize: 11, color: AppColors.onSurfaceVariant),
+                      fontSize: 11,
+                      color: AppColors.onSurfaceVariant,
+                    ),
                   ),
                 ],
               ),
@@ -379,25 +390,11 @@ class _HistoryCard extends ConsumerWidget {
   }
 
   void _confirmDelete(BuildContext context, WidgetRef ref) {
-    showDialog(
-      context: context,
-      builder: (_) => AlertDialog(
-        title: const Text('기록 삭제'),
-        content: const Text('이 세션 기록을 삭제합니다. 되돌릴 수 없습니다.'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('취소'),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              ref.read(historyProvider.notifier).delete(item.id);
-            },
-            child: const Text('삭제'),
-          ),
-        ],
-      ),
+    showRecordDeletionDialog(
+      context,
+      title: '기록 삭제',
+      description: '이 연습의 질문·답변과 리포트를 삭제합니다. 되돌릴 수 없습니다.',
+      onDelete: () => ref.read(historyProvider.notifier).delete(item.id),
     );
   }
 }
@@ -406,8 +403,11 @@ class _DuoButton extends StatefulWidget {
   final String label;
   final IconData icon;
   final VoidCallback onPressed;
-  const _DuoButton(
-      {required this.label, required this.icon, required this.onPressed});
+  const _DuoButton({
+    required this.label,
+    required this.icon,
+    required this.onPressed,
+  });
 
   @override
   State<_DuoButton> createState() => _DuoButtonState();
@@ -433,8 +433,7 @@ class _DuoButtonState extends State<_DuoButton> {
           border: _pressed
               ? null
               : Border(
-                  bottom: BorderSide(
-                      color: AppColors.primaryShadow, width: 4),
+                  bottom: BorderSide(color: AppColors.primaryShadow, width: 4),
                 ),
         ),
         child: Row(

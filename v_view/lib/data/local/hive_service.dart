@@ -7,8 +7,8 @@ const _boxSessionInput = 'session_input';
 const _boxSettings = 'settings';
 
 class HiveService {
-  static Future<void> init() async {
-    await Hive.initFlutter();
+  static Future<void> init({String? subdirectory}) async {
+    await Hive.initFlutter(subdirectory);
     await Future.wait([
       Hive.openBox<Map>(_boxSession),
       Hive.openBox<Map>(_boxReport),

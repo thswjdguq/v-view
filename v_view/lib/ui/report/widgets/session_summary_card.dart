@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../app.dart' show kSecondaryColor, kTextColor;
+import '../../../theme/app_theme.dart';
 import '../../../domain/report/session_report.dart';
 import '../../../domain/session_setup/session_input.dart';
 
@@ -17,23 +17,25 @@ class SessionSummaryCard extends StatelessWidget {
     };
     final minutes = report.totalDurationSeconds ~/ 60;
     final seconds = report.totalDurationSeconds % 60;
-    final durationText = minutes > 0
-        ? '$minutes분 $seconds초'
-        : '$seconds초';
+    final durationText = minutes > 0 ? '$minutes분 $seconds초' : '$seconds초';
 
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: kSecondaryColor, width: 2),
+        color: AppColors.surfaceContainerLowest,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: AppColors.outlineVariant),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
             '세션 요약',
-            style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18, color: kTextColor),
+            style: TextStyle(
+              fontWeight: FontWeight.w800,
+              fontSize: 18,
+              color: AppColors.onSurface,
+            ),
           ),
           const SizedBox(height: 12),
           _SummaryRow(label: '면접 유형', value: typeName),
@@ -63,8 +65,28 @@ class _SummaryRow extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(label, style: const TextStyle(color: Colors.black54, fontWeight: FontWeight.w600, fontSize: 15)),
-          Text(value, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: kTextColor)),
+          Expanded(
+            child: Text(
+              label,
+              style: const TextStyle(
+                color: AppColors.onSurfaceVariant,
+                fontWeight: FontWeight.w600,
+                fontSize: 15,
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              value,
+              textAlign: TextAlign.end,
+              style: const TextStyle(
+                fontWeight: FontWeight.w800,
+                fontSize: 15,
+                color: AppColors.onSurface,
+              ),
+            ),
+          ),
         ],
       ),
     );

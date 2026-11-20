@@ -5,11 +5,13 @@ class GazeFrame {
   final bool isGazing;
   final bool faceDetected;
   final DateTime timestamp;
+  final int segmentId;
 
   const GazeFrame({
     required this.isGazing,
     required this.faceDetected,
     required this.timestamp,
+    this.segmentId = 0,
   });
 }
 
@@ -90,43 +92,40 @@ class GazeAnalyzer {
 
   // 분산 상태가 연속 1초 이상일 때만 1회로 카운트
   (int count, double totalSeconds, double maxSeconds) _computeDistractionStats(
-      List<GazeFrame> frames) {
+    List<GazeFrame> frames,
+  ) {
     int count = 0;
     double totalSeconds = 0;
     double maxSeconds = 0;
 
     DateTime? distractionStart;
 
-    for (int i = 0; i < frames.length; i++) {
-      final frame = frames[i];
-      if (!frame.isGazing && frame.faceDetected) {
-        distractionStart ??= frame.timestamp;
-      } else {
-        if (distractionStart != null) {
-          final durationMs =
-              frame.timestamp.difference(distractionStart).inMilliseconds;
-          if (durationMs >= _distractionThresholdMs) {
-            count++;
-            final seconds = durationMs / 1000;
-            totalSeconds += seconds;
-            if (seconds > maxSeconds) maxSeconds = seconds;
-          }
-          distractionStart = null;
-        }
-      }
-    }
-
-    if (distractionStart != null && frames.isNotEmpty) {
-      final durationMs = frames.last.timestamp
-          .difference(distractionStart)
-          .inMilliseconds;
+    void closeDistraction(DateTime end) {
+      final start = distractionStart;
+      if (start == null) return;
+      final durationMs = end.difference(start).inMilliseconds;
       if (durationMs >= _distractionThresholdMs) {
         count++;
         final seconds = durationMs / 1000;
         totalSeconds += seconds;
         if (seconds > maxSeconds) maxSeconds = seconds;
       }
+      distractionStart = null;
     }
+
+    for (int i = 0; i < frames.length; i++) {
+      final frame = frames[i];
+      if (i > 0 && frames[i - 1].segmentId != frame.segmentId) {
+        closeDistraction(frames[i - 1].timestamp);
+      }
+      if (!frame.isGazing && frame.faceDetected) {
+        distractionStart ??= frame.timestamp;
+      } else {
+        closeDistraction(frame.timestamp);
+      }
+    }
+
+    if (frames.isNotEmpty) closeDistraction(frames.last.timestamp);
 
     return (count, totalSeconds, maxSeconds);
   }

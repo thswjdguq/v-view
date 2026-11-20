@@ -36,4 +36,16 @@ class SessionReport {
     required this.improvementPoints,
     this.isAiFeedbackAvailable = true,
   });
+
+  SessionReport withFeedback(List<ImprovementPoint> points) => SessionReport(
+    id: id,
+    createdAt: createdAt,
+    interviewType: interviewType,
+    gazeMetrics: gazeMetrics,
+    qaList: qaList,
+    totalQuestions: totalQuestions,
+    totalDurationSeconds: totalDurationSeconds,
+    improvementPoints: List.unmodifiable(points),
+    isAiFeedbackAvailable: true,
+  );
 }

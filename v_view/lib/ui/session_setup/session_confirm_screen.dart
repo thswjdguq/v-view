@@ -4,6 +4,7 @@ import '../../theme/app_theme.dart';
 import '../../domain/session_setup/session_input.dart';
 import '../../state/session_setup/session_setup_provider.dart';
 import '../questions/question_list_screen.dart';
+import '../widgets/practice_button.dart';
 
 class SessionConfirmScreen extends ConsumerWidget {
   const SessionConfirmScreen({super.key});
@@ -18,7 +19,7 @@ class SessionConfirmScreen extends ConsumerWidget {
     };
 
     return Scaffold(
-      backgroundColor: AppColors.surface,
+      backgroundColor: const Color(0xFFFAFCFA),
       appBar: AppBar(
         backgroundColor: AppColors.surfaceContainerLowest,
         elevation: 0,
@@ -35,16 +36,40 @@ class SessionConfirmScreen extends ConsumerWidget {
                 _InfoRow(label: '면접 유형', value: typeName),
                 _InfoRow(label: '직종 / 전공', value: input.position),
                 _InfoRow(label: '회사 / 학교', value: input.company),
+                if (input.age.isNotEmpty)
+                  _InfoRow(label: '나이', value: input.age),
+                if (input.school.isNotEmpty)
+                  _InfoRow(label: '학교', value: input.school),
+                if (input.education.isNotEmpty)
+                  _InfoRow(label: '학력', value: input.education),
+                if (input.certificationNames.isNotEmpty)
+                  _InfoRow(
+                    label: '자격증',
+                    value: input.certificationNames.join(', '),
+                  ),
+                if (input.resumeSummary.isNotEmpty)
+                  _InfoRow(label: '이력서 요약', value: input.resumeSummary),
+                if (input.selfIntroduction.isNotEmpty)
+                  _InfoRow(label: '이전 소개서', value: input.selfIntroduction),
+                for (var i = 0; i < 3; i++)
+                  if (input.essayAt(i).answer.trim().isNotEmpty)
+                    _InfoRow(
+                      label: '자소서 ${i + 1}',
+                      value:
+                          '${input.essayAt(i).question}\n${input.essayAt(i).answer}',
+                    ),
+                _InfoRow(label: '질문 수', value: '${input.questionCount}개'),
+                _InfoRow(label: '질문당 시간', value: '${input.timerMinutes}분'),
                 _InfoRow(
-                  label: '자기소개서',
-                  value: input.selfIntroduction.length > 60
-                      ? '${input.selfIntroduction.substring(0, 60)}...'
-                      : input.selfIntroduction,
+                  label: '준비 시간',
+                  value: input.preparationSeconds == 0
+                      ? '없음'
+                      : '질문마다 ${input.preparationSeconds}초',
                 ),
                 _InfoRow(
-                    label: '질문 수', value: '${input.questionCount}개'),
-                _InfoRow(
-                    label: '질문당 시간', value: '${input.timerMinutes}분'),
+                  label: '카메라',
+                  value: input.cameraEnabled ? '시선 분석 사용' : '사용하지 않음',
+                ),
               ],
             ),
             const SizedBox(height: 16),
@@ -53,30 +78,38 @@ class SessionConfirmScreen extends ConsumerWidget {
               titleColor: const Color(0xFFFF9600),
               titleIcon: Icons.shield_outlined,
               children: const [
+                _BulletRow(text: '카메라 영상은 기기에서 실시간 시선 분석 후 즉시 폐기됩니다.'),
+                _BulletRow(text: '앱은 원본 영상·오디오 파일을 별도로 저장하지 않습니다.'),
                 _BulletRow(
-                    text: '카메라 영상은 기기에서 실시간 시선 분석 후 즉시 폐기됩니다.'),
-                _BulletRow(text: '원본 영상·오디오는 저장되지 않습니다.'),
+                  text:
+                      '입력 텍스트, 시선 지표, 리포트는 기기에 저장됩니다. 지원 정보·답변 텍스트·시선 지표는 AI 질문·피드백 생성 시 외부 API로 전송됩니다.',
+                ),
                 _BulletRow(
-                    text: '저장 항목: 입력 텍스트, 시선 지표, 리포트 (기기 로컬만)'),
-                _BulletRow(
-                    text: '저장된 데이터는 설정에서 언제든 삭제할 수 있습니다.'),
+                  text:
+                      '마이크 답변은 기기의 음성 인식 서비스로 텍스트로 변환됩니다. 인식된 내용은 제출 전에 확인하고 수정할 수 있습니다.',
+                ),
+                _BulletRow(text: '저장된 연습 기록은 기록 목록에서 삭제할 수 있습니다.'),
               ],
             ),
             const SizedBox(height: 32),
-            _DuoButton(
+            const Text(
+              '시작하면 첫 질문이 공개됩니다. 답변을 제출하면 필요한 경우에만 추가 질문을 해요. 시간이 끝나도 직접 확인한 뒤 제출할 수 있어요.',
+            ),
+            const SizedBox(height: 16),
+            PracticeButton(
               label: '면접 시작',
               icon: Icons.play_arrow_rounded,
-              filled: true,
               onPressed: () => Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (_) => const QuestionListScreen()),
               ),
             ),
             const SizedBox(height: 12),
-            _DuoButton(
-              label: '돌아가서 수정',
-              filled: false,
-              onPressed: () => Navigator.pop(context),
+            Center(
+              child: TextButton(
+                onPressed: () => Navigator.pop(context),
+                child: const Text('돌아가서 수정'),
+              ),
             ),
           ],
         ),
@@ -120,8 +153,11 @@ class _SectionCard extends StatelessWidget {
           Row(
             children: [
               if (titleIcon != null) ...[
-                Icon(titleIcon,
-                    size: 18, color: titleColor ?? AppColors.onSurface),
+                Icon(
+                  titleIcon,
+                  size: 18,
+                  color: titleColor ?? AppColors.onSurface,
+                ),
                 const SizedBox(width: 6),
               ],
               Text(
@@ -156,16 +192,20 @@ class _InfoRow extends StatelessWidget {
         children: [
           SizedBox(
             width: 88,
-            child: Text(label,
-                style: TextStyle(
-                    color: AppColors.onSurfaceVariant,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600)),
+            child: Text(
+              label,
+              style: TextStyle(
+                color: AppColors.onSurfaceVariant,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ),
           Expanded(
-            child: Text(value,
-                style:
-                    TextStyle(fontSize: 14, color: AppColors.onSurface)),
+            child: Text(
+              value,
+              style: TextStyle(fontSize: 14, color: AppColors.onSurface),
+            ),
           ),
         ],
       ),
@@ -184,85 +224,20 @@ class _BulletRow extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('• ',
-              style: TextStyle(
-                  color: Color(0xFFFF9600), fontWeight: FontWeight.bold)),
-          Expanded(
-              child: Text(text,
-                  style: TextStyle(
-                      fontSize: 14, color: AppColors.onSurface))),
-        ],
-      ),
-    );
-  }
-}
-
-class _DuoButton extends StatefulWidget {
-  final String label;
-  final IconData? icon;
-  final VoidCallback onPressed;
-  final bool filled;
-
-  const _DuoButton({
-    required this.label,
-    required this.onPressed,
-    this.icon,
-    this.filled = true,
-  });
-
-  @override
-  State<_DuoButton> createState() => _DuoButtonState();
-}
-
-class _DuoButtonState extends State<_DuoButton> {
-  bool _pressed = false;
-
-  @override
-  Widget build(BuildContext context) {
-    final bg = widget.filled
-        ? AppColors.primaryContainer
-        : AppColors.surfaceContainerLowest;
-    final fg = widget.filled
-        ? AppColors.onPrimaryContainer
-        : AppColors.primary;
-    final BoxBorder? border = widget.filled
-        ? (_pressed
-            ? null
-            : Border(
-                bottom: BorderSide(
-                    color: AppColors.primaryShadow, width: 4)))
-        : Border.all(color: AppColors.primaryContainer, width: 2);
-
-    return GestureDetector(
-      onTapDown: (_) => setState(() => _pressed = true),
-      onTapUp: (_) => setState(() => _pressed = false),
-      onTapCancel: () => setState(() => _pressed = false),
-      onTap: widget.onPressed,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 80),
-        width: double.infinity,
-        margin: EdgeInsets.only(top: widget.filled && _pressed ? 4 : 0),
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: bg,
-          borderRadius: BorderRadius.circular(16),
-          border: border,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (widget.icon != null) ...[
-              Icon(widget.icon, color: fg, size: 22),
-              const SizedBox(width: 8),
-            ],
-            Text(
-              widget.label,
-              style: TextStyle(
-                  color: fg, fontSize: 18, fontWeight: FontWeight.w800),
+          const Text(
+            '• ',
+            style: TextStyle(
+              color: Color(0xFFFF9600),
+              fontWeight: FontWeight.bold,
             ),
-          ],
-        ),
+          ),
+          Expanded(
+            child: Text(
+              text,
+              style: TextStyle(fontSize: 14, color: AppColors.onSurface),
+            ),
+          ),
+        ],
       ),
     );
   }

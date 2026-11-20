@@ -1,0 +1,41 @@
+{
+  "verifiedAt": "2026-11-11T05:51:26.430685Z",
+  "scope": "Synthetic portfolio inputs; actual OpenAI responses through the loopback PC proxy. No Firebase login or cloud deployment.",
+  "model": "gpt-4o-mini",
+  "requests": 3,
+  "questions": [
+    {
+      "id": "q1",
+      "text": "팀 프로젝트에서 중복 제출 오류를 재현하는 과정에서 어떤 방법을 사용하셨나요?",
+      "intent": "문제 해결 능력"
+    },
+    {
+      "id": "q2",
+      "text": "버튼 잠금과 상태 검증을 추가하면서 겪었던 도전 과제는 무엇이었고, 그것을 어떻게 해결하셨나요?",
+      "intent": "기술적 접근 및 팀워크"
+    }
+  ],
+  "syntheticAnswer": "가상 경험입니다. 팀 앱에서 중복 제출로 같은 기록이 생성되는 문제를 발견했습니다. 빠른 연속 탭으로 오류를 재현하고 요청 중 버튼 잠금과 상태 검증을 추가했습니다. 완료 전 두 번 제출해도 기록이 하나만 남는 테스트를 작성했습니다.",
+  "followUp": {
+    "text": "여러 번의 빠른 연속 탭으로 재현했다고 하셨는데, 구체적으로 어떤 상황에서 발생했는지 예를 들어 설명해 주실 수 있나요? 또한, 버튼 잠금과 상태 검증을 추가한 방법에 대해서도 좀 더 자세히 말씀해 주실 수 있을까요?",
+    "intent": "구체적 사례와 방법에 대한 추가 설명 요청"
+  },
+  "feedback": [
+    {
+      "title": "구체적인 경험 설명",
+      "description": "답변에서 본인의 역할과 구체적인 경험을 좀 더 명확하게 전달할 필요가 있습니다. 팀 프로젝트에서의 기여도를 강조하면 문제 해결 능력이 더욱 부각될 것입니다.",
+      "evidenceMetric": "\"가상 경험입니다. 팀 앱에서 중복 제출로 같은 기록이 생성되는 문제를 발견했습니다.\""
+    },
+    {
+      "title": "결과에 대한 설명 부족",
+      "description": "문제를 해결한 후의 결과나 성과를 공유하는 것이 중요합니다. 오류 재현 후 어떤 영향을 미쳤는지를 설명하면 답변의 깊이가 더해질 것입니다.",
+      "evidenceMetric": "\"기록이 하나만 남는 테스트를 작성했습니다.\""
+    },
+    {
+      "title": "답변 구조 개선",
+      "description": "답변을 좀 더 체계적으로 구성하여 문제 인식, 해결 과정, 결과 순으로 설명하면 이해하기 쉬워집니다. 이런 구조는 면접관에게 명확한 메시지를 전달할 수 있습니다.",
+      "evidenceMetric": "답변의 구조가 다소 일관성이 부족함."
+    }
+  ],
+  "limitations": "This is not a real applicant outcome, microphone test, camera accuracy measurement or deployed service."
+}

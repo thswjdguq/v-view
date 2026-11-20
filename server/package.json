@@ -1,0 +1,19 @@
+{
+  "name": "v-view-ai-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/local.js",
+    "local:setup": "node scripts/setup-local.js",
+    "start:firebase": "node --env-file-if-exists=.env src/index.js",
+    "test": "node --test",
+    "cloud:plan": "node scripts/prepare-cloud-run.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.5.0"
+  }
+}

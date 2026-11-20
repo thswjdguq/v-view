@@ -10,36 +10,35 @@ import 'package:v_view/state/interview/interview_provider.dart';
 // Fake API — 네트워크 없이 결정론적 응답 반환
 class _FakeApiService extends Fake implements ClaudeApiService {
   @override
-  Future<List<InterviewQuestion>> generateQuestions(SessionInput input) async => [
-        const InterviewQuestion(id: 'q1', text: '자기소개를 해주세요.', intent: '기본 소개'),
-        const InterviewQuestion(id: 'q2', text: '지원 동기를 말씀해주세요.', intent: '직무 이해'),
-      ];
+  Future<List<InterviewQuestion>> generateQuestions(
+    SessionInput input,
+  ) async => [
+    const InterviewQuestion(id: 'q1', text: '자기소개를 해주세요.', intent: '기본 소개'),
+    const InterviewQuestion(id: 'q2', text: '지원 동기를 말씀해주세요.', intent: '직무 이해'),
+  ];
 
   @override
   Future<InterviewQuestion> generateFollowUp({
     required InterviewQuestion question,
     required String userAnswer,
-  }) async =>
-      const InterviewQuestion(
-        id: 'fu1',
-        text: '더 구체적으로 설명해주세요.',
-        intent: '심층 확인',
-        isFollowUp: true,
-      );
+    List<QuestionAnswer> conversation = const [],
+  }) async => const InterviewQuestion(
+    id: 'fu1',
+    text: '더 구체적으로 설명해주세요.',
+    intent: '심층 확인',
+    isFollowUp: true,
+  );
 
   @override
   Future<List<ImprovementPoint>> generateFeedback({
     required List<QuestionAnswer> qaList,
     required GazeMetrics gazeMetrics,
-  }) async =>
-      [];
+  }) async => [];
 }
 
 ProviderContainer makeContainer() => ProviderContainer(
-      overrides: [
-        claudeApiServiceProvider.overrideWithValue(_FakeApiService()),
-      ],
-    );
+  overrides: [claudeApiServiceProvider.overrideWithValue(_FakeApiService())],
+);
 
 const _testInput = SessionInput(
   type: InterviewType.job,
@@ -133,8 +132,10 @@ void main() {
       expect(c.read(interviewProvider).timerSeconds, 60);
     });
 
-    test('tickTimer — timerSeconds 1 감소, elapsedSeconds 1 증가', () {
+    test('tickTimer — 진행 중 timerSeconds 1 감소, elapsedSeconds 1 증가', () async {
       final c = makeContainer();
+      addTearDown(c.dispose);
+      await c.read(interviewProvider.notifier).start(_testInput);
       c.read(interviewProvider.notifier).resetTimer(30);
       c.read(interviewProvider.notifier).tickTimer();
       final state = c.read(interviewProvider);
@@ -142,8 +143,10 @@ void main() {
       expect(state.elapsedSeconds, 1);
     });
 
-    test('tickTimer 3회 연속 — 누적 3초 경과', () {
+    test('tickTimer 3회 연속 — 진행 중 누적 3초 경과', () async {
       final c = makeContainer();
+      addTearDown(c.dispose);
+      await c.read(interviewProvider.notifier).start(_testInput);
       c.read(interviewProvider.notifier).resetTimer(100);
       final n = c.read(interviewProvider.notifier);
       n.tickTimer();
@@ -152,6 +155,13 @@ void main() {
       final state = c.read(interviewProvider);
       expect(state.timerSeconds, 97);
       expect(state.elapsedSeconds, 3);
+    });
+    test('시작 전에는 답변 시간이 줄지 않는다', () {
+      final c = makeContainer();
+      addTearDown(c.dispose);
+      c.read(interviewProvider.notifier).tickTimer();
+      expect(c.read(interviewProvider).timerSeconds, 120);
+      expect(c.read(interviewProvider).elapsedSeconds, 0);
     });
   });
 

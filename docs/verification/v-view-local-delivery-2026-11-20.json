@@ -1,0 +1,33 @@
+{
+  "verifiedAt": "2026-11-20",
+  "artifact": "v_view/build/app/outputs/flutter-apk/v-view-local-ai-debug.apk",
+  "bytes": 192323424,
+  "sha256": "e171b94ec2ffd771133dcdeee022588f416e69c070fb277ee27061dd1bfc5f7a",
+  "entrypoint": "lib/main_local.dart",
+  "mode": "debug",
+  "flutter": "3.38.9",
+  "dart": "3.10.8",
+  "automatedFlutterTests": 197,
+  "flutterAnalyze": "No issues found",
+  "zipIntegrity": true,
+  "noEnvFiles": true,
+  "configuredPcKeyNotBundled": true,
+  "packagedSchoolNames": 1953,
+  "packagedCertificateNames": 1232,
+  "catalogRetrievalDate": "2026-11-18",
+  "catalogSources": "v_view/assets/catalogs/SOURCES.md",
+  "installedWithAdbReplace": true,
+  "cloudDeployed": false,
+  "additionalOpenAiRequestsForThisUpdate": 0,
+  "limitations": [
+    "Search catalogs are bundled reference snapshots, not live qualification or enrollment verification.",
+    "Automated speech and camera behavior tests use substitutes; physical-device accuracy is unmeasured."
+  ],
+  "androidEmulator": "Android 36; emulator-5556",
+  "launchActivity": "com.vview.v_view/.MainActivity",
+  "launchStatus": "ok",
+  "launchState": "COLD",
+  "foregroundActivityVerified": true,
+  "processErrorLogsAtCheck": "No AndroidRuntime:E or flutter:E output",
+  "publicationNote": "APK is a locally verified artifact and is excluded from Git. See Git history for source publication."
+}

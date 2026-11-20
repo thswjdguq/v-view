@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-11-20",
+  "image": "v-view-application-native-2026-11-20.jpg",
+  "source": "Native Android emulator window running the local AI APK",
+  "resolution": [
+    267,
+    619
+  ],
+  "scope": "Application materials: resume summary and essay question/answer inputs; fields left empty",
+  "captureTool": "Computer Use sky.get_window_state; original JPEG data exported without editing",
+  "apiCallsDuringCapture": 0,
+  "windowActions": "Read and scroll only; no typing, reset, submission or deletion",
+  "companionScreens": [
+    "v-view-guided-answer-2026-11-09.png",
+    "v-view-guided-report-2026-11-09.png",
+    "v-view-history-after-delete-2026-11-09.png"
+  ],
+  "companionScope": "Earlier native Android demo captures with synthetic answers and records; not live AI evaluation or measured user outcomes"
+}

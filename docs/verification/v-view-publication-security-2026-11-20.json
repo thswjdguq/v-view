@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-20",
+  "candidateFiles": 344,
+  "candidateFindings": [],
+  "privateEnvFiles": [],
+  "largeFiles": [],
+  "existingRemoteHistoryFindings": [],
+  "ignoredSensitiveProbePaths": 9,
+  "sensitiveProbePaths": 9,
+  "knownSyntheticFixtureExcluded": "server/test/local_config.test.js",
+  "knownHistoricalPlaceholderExcluded": "docs/SETUP.md: Anthropic prefix followed only by x characters",
+  "scope": "Recognizable token/private-key patterns and exact configured local OpenAI key bytes. Existing Firebase client configuration is not a server credential. This is not a full security audit."
+}

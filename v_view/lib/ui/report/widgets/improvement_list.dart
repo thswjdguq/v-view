@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../app.dart' show kPrimaryColor, kSecondaryColor, kTextColor;
+import '../../../theme/app_theme.dart';
 import '../../../domain/report/session_report.dart';
 
 class ImprovementList extends StatelessWidget {
@@ -14,15 +14,16 @@ class ImprovementList extends StatelessWidget {
       children: [
         const Text(
           '개선 포인트 TOP3',
-          style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18, color: kTextColor),
+          style: TextStyle(
+            fontWeight: FontWeight.w800,
+            fontSize: 18,
+            color: AppColors.onSurface,
+          ),
         ),
         const SizedBox(height: 12),
         ...points.asMap().entries.map(
-              (e) => _ImprovementItem(
-                rank: e.key + 1,
-                point: e.value,
-              ),
-            ),
+          (e) => _ImprovementItem(rank: e.key + 1, point: e.value),
+        ),
       ],
     );
   }
@@ -40,9 +41,9 @@ class _ImprovementItem extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: AppColors.surfaceContainerLowest,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: kSecondaryColor, width: 2),
+        border: Border.all(color: AppColors.outlineVariant),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -51,10 +52,17 @@ class _ImprovementItem extends StatelessWidget {
             width: 28,
             height: 28,
             alignment: Alignment.center,
-            decoration: const BoxDecoration(color: kPrimaryColor, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+              color: AppColors.primary,
+              shape: BoxShape.circle,
+            ),
             child: Text(
               '$rank',
-              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: Colors.white),
+              style: const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w800,
+                color: Colors.white,
+              ),
             ),
           ),
           const SizedBox(width: 14),
@@ -62,14 +70,31 @@ class _ImprovementItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(point.title,
-                    style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16, color: kTextColor)),
+                Text(
+                  point.title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 16,
+                    color: AppColors.onSurface,
+                  ),
+                ),
                 const SizedBox(height: 4),
-                Text(point.description, style: const TextStyle(fontSize: 14, color: kTextColor, height: 1.4)),
+                Text(
+                  point.description,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    color: AppColors.onSurfaceVariant,
+                    height: 1.5,
+                  ),
+                ),
                 const SizedBox(height: 6),
                 Text(
                   '근거: ${point.evidenceMetric}',
-                  style: const TextStyle(fontSize: 12, color: Colors.black45, fontWeight: FontWeight.w600),
+                  style: const TextStyle(
+                    fontSize: 12,
+                    color: AppColors.onSurfaceVariant,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ],
             ),

@@ -24,4 +24,12 @@ class GazeMetrics {
     maxDistractionSeconds: 0,
     quality: GazeQuality.unavailable,
   );
+  static const GazeMetrics cameraDisabled = GazeMetrics(
+    gazeRate: 0,
+    distractionCount: 0,
+    totalDistractionSeconds: 0,
+    maxDistractionSeconds: 0,
+    quality: GazeQuality.unavailable,
+    qualityNote: '카메라를 끄고 연습해 시선 지표를 측정하지 않았습니다.',
+  );
 }

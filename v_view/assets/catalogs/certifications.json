@@ -1,0 +1,6192 @@
+{
+  "source": "https://www.data.go.kr/data/15112802/fileData.do",
+  "sourceDate": "2023-03-16; includes historical names",
+  "retrievedAt": "2026-11-18",
+  "sourceSha256": "9590c139af476feddc8faafcad05650bb8a85f3cea24c473e1e3bdf005ce3767",
+  "entries": [
+    {
+      "name": "1급 청소년상담사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "1급 청소년지도사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "1급조리사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "2급 청소년상담사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "2급 청소년지도사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "2급조리사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "3D프린터운용기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "3급 청소년상담사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "3급 청소년지도사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "SQL 개발자(SQLD)",
+      "detail": "한국데이터산업진흥원 자격",
+      "aliases": [
+        "SQLD",
+        "SQL개발자"
+      ],
+      "sortOrder": 3
+    },
+    {
+      "name": "SQL 전문가(SQLP)",
+      "detail": "한국데이터산업진흥원 자격",
+      "aliases": [
+        "SQLP",
+        "SQL전문가"
+      ]
+    },
+    {
+      "name": "가구기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가구도장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가구제작기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가눈섭기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가맹거래사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "가스기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가스기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가스기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가스기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가스산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가스용접기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "가스텅스텐아크용접기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "감정사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "감정평가사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "객화차정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "객화차정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "객화차정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "갱부기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "거푸집기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "거푸집기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계기관정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계설비기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계설비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계정비기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계정비기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설기계차체정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설안전기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설안전기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설안전산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설재료기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설재료시험기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설재료시험기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건설재료시험산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축구조기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축구조기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축기계설비기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축기술사(건축설비)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축도장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축목공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축목공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축목공기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축목공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축목재시공기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축배관기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축설비기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축설비기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축설비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축시공기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축시공기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축시공기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축일반시공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축일반시공기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축일반시공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축재료시험기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축전기설비기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "건축품질시험기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "검량사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "검수사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경매사(수산)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경매사(약용)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경매사(양곡)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경매사(청과)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경매사(축산)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경매사(화훼)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경영지도사(1차공통)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경영지도사(마케팅)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경영지도사(생산관리)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경영지도사(인적자원관리)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "경영지도사(재무관리)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기계기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(10류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(11류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(12류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(13류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(14류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(15류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(1류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(2류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(3류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(4류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(5류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(6류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(7류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(8류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기능사2급(9류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기사1급(물리분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량기사2급(물리분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량물리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량물리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량전기기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "계량전기산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고분자제품기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고분자제품제조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고분자제품제조산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스기계기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스기계기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스기계기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스취급기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스취급기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스화학기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스화학기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압가스화학기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "고압합성기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공간정보융합기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공간정보융합산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공구기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공구제작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공기조화기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공업계기기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공업계기기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공업전자기기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공업화학기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공업화학기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공업화학기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공유압기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공유압기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공인노무사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "공인중개사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "공장관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공정관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공조냉동기계기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공조냉동기계기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공조냉동기계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공조냉동기계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "공조냉동기계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "과수재배기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "과수재배기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(독어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(러시아어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(말레이/인도네시아어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(베트남어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(불어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(스페인어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(아랍어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(영어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(이탈리아어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(일본어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(중국어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관광통역안내사(태국어)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "관세사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "광고도장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산기계설치기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산기계운전및수리기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산기계운전및수리기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산보안기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산차량기계운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광산환경기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광학기기산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광학기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "광학기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "교통기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "교통기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "교통산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "교환기스윗치조정기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "교환설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "교환설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "구들온돌기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "국내여행안내사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "국제의료관광코디네이터",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "굴착기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "굴착기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "굴착기운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "궤도장비정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "궤도장비정비기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "궤도장비정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "귀금속가공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "귀금속가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "귀금속가공기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "귀금속가공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "귀금속공예다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "그린전동자동차기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속가공기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속공예기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속기사(제련분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속도장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료시험기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료시험기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재료시험기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속재창호기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금속제련기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형공구기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형공구기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "금형제작기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계가공기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계가공기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계가공조립기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계검사및설치기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계검사및설치기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계경비지도사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "기계공정설계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계기술사(교통차량)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계기술사(기계공작및공작기계)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계기술사(냉난방및냉동기계)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계기술사(열원동기)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계기술사(정밀기계)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계설계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계설계다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계설계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계안전기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계안전기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계안전기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계자수기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계자수기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계자수기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계전자기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계정비다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계제작기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계조립기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기계조립산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기상감정기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기상기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기상예보기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기술지도사(1차공통)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "기술지도사(기술혁신관리)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "기술지도사(정보기술관리)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "기어절삭기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기어절삭기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기와기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기중기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기중기운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기편기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기편기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "기편기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "나염기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "나염기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "나염기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "나전칠기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "나전칠기기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "나전칠기기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "냉간압연기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "냉동식품제조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "냉동식품제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "냉동식품제조기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농기계운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농기계정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농기계정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농림토양평가관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농림토양평가관리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농산물품질관리사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "농어업토목기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농업기계기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농업기계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농업기계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농예화학기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농예화학기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농예화학기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농예화학기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농예화학기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농작업안전보건기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농화학기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "농화학기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "누설비파괴검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "다듬질기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "담배제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "대기관리,수질관리,소음진동기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "대기관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "대기환경,수질환경,소음진동기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "대기환경,수질환경산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "대기환경기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "대기환경산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "덤프트럭기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "데이터분석 전문가(ADP)",
+      "detail": "한국데이터산업진흥원 자격",
+      "aliases": [
+        "ADP",
+        "데이터분석전문가"
+      ]
+    },
+    {
+      "name": "데이터분석 준전문가(ADsP)",
+      "detail": "한국데이터산업진흥원 자격",
+      "aliases": [
+        "ADsP",
+        "데이터분석준전문가"
+      ],
+      "sortOrder": 4
+    },
+    {
+      "name": "도금기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도로및공항기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도배기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도시계획기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도시계획기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도자공예기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도자기공예기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도자기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도자기제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "도화기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "동력기계정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "디자인및포장기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "디자인및포장기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "디지털제어산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "라디오텔레비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "라디오텔레비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "로더운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "로봇기구개발기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "로봇소프트웨어개발기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "로봇하드웨어개발기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "로우더기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "로울러기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "롤러운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "멀티미디어콘텐츠제작전문가",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "메카트로닉스기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "메카트로닉스다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "메카트로닉스산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "모우터그레이더기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "모터그레이더운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "목공예기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "목공예기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "목재가공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "목재창호기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "목재창호기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "목질재료기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "무선설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "문선식자기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "문선식자기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "문선식자기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(가공석공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(대목수)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(도금공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(드잡이공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(모사공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(목조각공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(박제및표본제작공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(번와와공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(보존처리공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(석조각공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(세척공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(소목수)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(식물보호공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(실측설계사보)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(쌓기석공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(온돌공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(제작와공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(조경공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(철물공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(칠공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(표구공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(한식미장공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(화공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기능자(훈증공)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기술자(단청)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기술자(보수)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기술자(보존과학)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기술자(식물보호)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기술자(실측설계)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "문화재수리기술자(조경)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "물류관리사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "물리탐광기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미용사(네일)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미용사(메이크업)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미용사(일반)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미용사(피부)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미용장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "미장기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "밀링기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "밀링기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "바이오화학제품제조기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "바이오화학제품제조산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "박물관및미술관준학예사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "반도체설계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "반도체장비유지보수기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "발송배전기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "발전기계설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "발전기계설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "발전기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "발전설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사선비파괴검사기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사선비파괴검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방사선비파괴검사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방수기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방수기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방수산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방재기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방적기보전기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방적기보전기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방적기조정기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방적기조정기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "방직산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "배관기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "배관기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "배관기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "배관기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "배관기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "배관산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "버섯산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "버섯종균기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "변리사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "변전설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "변전설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보도사진기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보도사진기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보석가공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보석감정사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보석감정산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보선기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보오링기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보일러기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보일러산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보일러시공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "보일러취급기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "복어조리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "복어조리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "불도저운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "비계기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "비철야금기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "비파괴검사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "비파괴검사기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "비파괴검사기사1급(전자기침투)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "비파괴검사기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사래채취기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사리채취기운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사무자동화산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사진기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사진기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사진기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사진제판기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사진제판기능사2급(전산사진식자)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사출금형기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사출금형기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사출금형산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사출금형설계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사회복지사 1급",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "사회조사분석사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "사회조사분석사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림경영기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림경영기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림경영기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림경영산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림공학산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산림산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업계측제어기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업기계설비기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업기계정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업기계정비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업디자인다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업보건지도사(산업위생공학)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "산업보건지도사(직업환경의학)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "산업설비다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업안전기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업안전산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업안전지도사(건설안전)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "산업안전지도사(기계안전)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "산업안전지도사(전기안전)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "산업안전지도사(화공안전)",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "산업위생관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업위생관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업위생관리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "산업응용기술사(농예화학)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "상업사진기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "상업사진기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "상하수도기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생물분류기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생물분류기사(동물)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생물분류기사(식물)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생산기계다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생산자동화기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생산자동화다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "생산자동화산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "석공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "석공예기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "석재기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "석재기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선광기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선박건조기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선박기계기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선박기계기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선박기계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선박조립기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선반기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선반기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선체가공기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선체건조기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선체건조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "선체의장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "설비보전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "설비보전기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유가공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유공정기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기계기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유디자인산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유물리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유물리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유제도디자인기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유화학기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "섬유화학산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "세라믹기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "세라믹기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "세무사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "세탁기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방설비기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방설비기사(기계분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방설비기사(전기분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방설비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방설비산업기사(기계분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방설비산업기사(전기분야)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소방시설관리사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "소방안전교육사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "소비자전문상담사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소비자전문상담사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소음진동기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소음진동기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "소음진동산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "손해평가사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "송배전설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "송배전설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "쇄석기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "쇄석기운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산물품질관리사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "수산식품가공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산양식기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산양식기사1급(1류,2류,3류,4류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산양식기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산제조기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산제조기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수산제조산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수자수기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수자수기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수자수기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수자원개발기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수질관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수질환경기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수질환경산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수치제어밀링기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수치제어선반기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수편기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수편기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "수편기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "스크레이퍼기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "스크레이퍼운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "스크린인쇄기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "스포츠경영관리사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "승강기기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "승강기기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "승강기산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시각디자인기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시각디자인다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시각디자인산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시멘트제조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시설원예기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시설원예기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시설원예기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "시스템제어기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식물보호기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식물보호기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식물보호산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식육가공기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식육처리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식품가공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식품가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식품기계기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식품기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식품기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "식품산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "신발류제조기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "신발산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "신재생에너지발전설비기능사(태양광)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "신재생에너지발전설비기사(태양광)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "신재생에너지발전설비산업기사(태양광)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "신호보안산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "실내건축기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "실내건축기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "실내건축산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "아스팔트믹싱플랜트기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "아스팔트피니셔운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "아스팔트휘니셔기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "압연기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "압연기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "압연기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "압연기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "압연기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양복기능사(양복봉제)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양복기능사(양복패턴)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양복기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양복봉재기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양복재단기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양식조리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양식조리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양장기능사(양장봉제)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양장기능사(양장패턴)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양장기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양장봉재기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양장재단기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "양화장치운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어간유제조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어간유제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어간유제조기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어로기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어로기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어로기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어로산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어병기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "어업생산관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "에너지관리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "에너지관리기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "에너지관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "에너지관리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "에너지기술사(원자로계측)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "연삭기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열간압연기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열관리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열차조작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열처리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열처리기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열처리기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "열처리기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "염색가공기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "염색가공기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "염색기능사(날염)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "염색기능사(침염)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "염색기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "염색기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "영림기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "영사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "온돌기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "온돌기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "온돌기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "온수온돌기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "온실가스관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "온실가스관리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "옵셋제판기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "옵셋제판기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "옵셋제판기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "옵셋제판기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "와전류비파괴검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "외국어번역행정사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "용접기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "용접기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "용접기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "용접기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "용접기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "용접산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원동기검사기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원동기시공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원동기취급기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원예기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원예종묘기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원예종묘기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원예종묘기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원형기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "원형기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "웹디자인기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사(제1류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사(제2류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사(제3류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사(제4류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사(제5류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능사(제6류)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물취급기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "위험물취급기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유기농업기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유기농업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유기농업산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유기합성기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유리가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유리시공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유리제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선방송설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선설비기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선설비기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선통신선로기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유선통신설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "유체기계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "음향영상기기기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "음향영상기기기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "응용지질기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "응용지질기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "의공기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "의공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "의료전자기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "의류기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "의류기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "이러닝운영관리사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "이산화탄소가스아크용접기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "이용사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "이용장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인간공학기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인간공학기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인쇄기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인쇄기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인쇄기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인쇄기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인쇄기술다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인수통합종목",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인판공예기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "인형기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "일반경비지도사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "일반기계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "일반기계기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "일반기계기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "일반판금기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "일반행정사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "일식조리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "일식조리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임베디드기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임산가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임산가공기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임산가공기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임산가공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임상심리사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임상심리사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임업종묘기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임업종묘기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "임업종묘기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자기비파괴검사기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자기비파괴검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자기비파괴검사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동전신기기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동전신기기기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차검사기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차검사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차검사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차기관기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차기관기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차기관정비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차보수도장기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차새시기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차새시기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차새시정비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차전기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차전기기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차전기정비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차정비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차정비기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차정비기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차차체수리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차판금기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자동차판금기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자수기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자연생태복원기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자연생태복원산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "자연환경관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "잠수기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "잠수기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "잠수기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "잠수산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "재료조직평가산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기계측제어기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기공사기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기공사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기공사기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기공사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기공사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기(1)기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기(1)기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기(1)기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기(2)기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기(2)기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기(2)기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기기산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기기술사(전기재료)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기안전기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기안전기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기안전기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기용접기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기응용기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기철도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기철도기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기철도기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기철도산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전기통신기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용가공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용건축제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용기계제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용기계제도기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용조선제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전산응용토목제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전신단말기기기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전신전화기기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전신전화기기기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전신전화기기기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기제어산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기조작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기조작기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기조직응용기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산기조직응용산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자계산조직응용기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자기기기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자기기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자기기기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자기술사(전자음향)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자기술사(전자재료)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자부품장착기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자부품장착산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자응용기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자조판기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자출판기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자캐드기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전자회로설계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "전화단말기기기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정련표백기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정련표백기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀가공기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀가공및측정기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀계측다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀기계기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀기계기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀설계기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀설계기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀측정기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀측정기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀측정기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정밀화학기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보기계설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보기기운용기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보기술다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보기술산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보처리기능사",
+      "detail": "국가기술자격",
+      "aliases": [],
+      "sortOrder": 2
+    },
+    {
+      "name": "정보처리기능사(상시)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보처리기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보처리기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보처리기사",
+      "detail": "국가기술자격",
+      "aliases": [
+        "정처기"
+      ],
+      "sortOrder": 0
+    },
+    {
+      "name": "정보처리기술사(수학응용)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보처리기술사(정보처리)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보처리산업기사",
+      "detail": "국가기술자격",
+      "aliases": [
+        "정처산기"
+      ],
+      "sortOrder": 1
+    },
+    {
+      "name": "정보통신설비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보통신설비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정보통신설비다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "정수시설운영관리사1급",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "정수시설운영관리사2급",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "정수시설운영관리사3급",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "제강기능사(연속주조)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제강기능사(전기로)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제강기능사(전로)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제강기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제강기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제강기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제과기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제과기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제과기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제관기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제관기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제관기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제관산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제빵기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제빵기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제빵산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제선기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제선기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제선기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제선기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제선기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제지기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제지기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제지기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제직기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제판기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제포기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제품디자인기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제품디자인기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제품디자인산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제품응용모델링기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제화기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제화저부기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "제화제갑기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조경기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조경기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조경기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조경산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조리기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선기계절단기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선기술사(검사)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선기술사(기관)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선선체기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선요철기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조선의장기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조적기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조적기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조적기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조적산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "조주기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "종자기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "종자기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "종자기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "종자산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주강용해기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주강조형기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물사처리기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물용해기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물용해기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물용해기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물조형기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물조형기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주물조형기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주산1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주산2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주조기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주조기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주조산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주조조판기기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주조조판기기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "주택관리사보",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "준설선기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "중기검사기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "중기정비기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "중기정비기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "중식조리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "중식조리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지게차기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지게차운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지구물리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지도제작기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적기능산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지적산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지질및지반기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지하수기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지하자원처리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지형연판기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "지형연판기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직기보전기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직기보전기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직기조정기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직기조정기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직물가공기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직업상담사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "직업상담사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "차량기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "창호제작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "창호제작기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "창호제작기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "창호제작기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "채소재배기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "채소재배기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "채소재배기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "천공기운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "천장크레인운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철골구조물기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철골구조물기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철골기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철골기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철골기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철골기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철근기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철근기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도동력차기관정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도동력차기관정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도동력차기관정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도동력차전기정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도동력차전기정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도동력차전기정비산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도신호기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도신호기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도신호기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도신호산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도운송산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도전기신호기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도차량기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도차량기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도차량산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도차량정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도차량정비기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도토목기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철도토목기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "철야금기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "초상사진기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "초상사진기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "초음파비파괴검사기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "초음파비파괴검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "초음파비파괴검사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축로기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축산기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축산기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축산기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축산산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축산식품가공기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "축소사진기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "측량기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "측량기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "측량및지형공간정보기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "측량및지형공간정보기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "측량및지형공간정보산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "측지기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "치공구설계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "치공구설계산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "침염기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "침염기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "침염기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "침투비파괴검사기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "침투비파괴검사기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "침투비파괴검사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컨벤션기획사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컨벤션기획사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컨테이너크레인운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컬러리스트기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컬러리스트산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컴퓨터그래픽스운용기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컴퓨터시스템응용기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컴퓨터응용가공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컴퓨터응용밀링기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "컴퓨터응용선반기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "코크스기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "코크스기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "콘크리트기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "콘크리트기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "콘크리트믹서기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "타워크레인운전기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "타일기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "타일기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "타자기수리기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "타출판금기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "타출판금기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "탐사기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "텔레마케팅관리사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목구조기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목기술사(수자원)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목기술사(에너지토목)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목시공기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목재료시험기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목제도기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토목품질시험기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토양환경기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토양환경기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "토질및기초기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "통신나선기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "통신케이블기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "통조림제조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "통조림제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "통조림제조기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "특수도금기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금제관기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금제관기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "판금제관산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "패션디자인다기능기술자",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "패션디자인산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "패션머천다이징산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "펄프제지기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "편물기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "폐기물처리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "폐기물처리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "폐기물처리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "포장기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "포장기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "포장기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "포장산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "표면처리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "표면처리기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "표면처리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "표면처리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "품질경영기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "품질경영산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "품질관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "품질관리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "프레스금형기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "프레스금형기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "프레스금형산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "프레스금형설계기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "플라스틱창호기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "플랜트배관기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "피복아크용접기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "피아노조율기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "피아노조율기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "피아노조율산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한국어교육능력검정시험",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "한복기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한복기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한복기능장",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한복산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한식조리기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한식조리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한천제조기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한천제조기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "한천제조기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "함석기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기관기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기관정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기술사(항공장비)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기체기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공기체정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공사진기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공장비정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공전기·전자정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공전자정비기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항공정비기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항로표지기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항로표지기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항로표지산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "항만및해안기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해사행정사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "해양공학기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해양기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해양기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해양생산관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해양자원개발기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해양조사산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "해양환경기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "핵연료기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "호텔경영사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "호텔관리사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "호텔서비스사",
+      "detail": "국가전문자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사(무기약품)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사(섬유소)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사(연료및윤활유)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사(유기화학제품)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사(전기화학)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공기술사(화학비료)",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공안전기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공안전기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화공안전기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류관리기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류관리기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류관리기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류관리산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류제조기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약류제조산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화약취급기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화재감식평가기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화재감식평가산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학공장설계기술사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학반응기기조작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학반응기기조작기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학반응기기조작기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분리기기조작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분리기기조작기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분리기기조작기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분석기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분석기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분쇄혼합기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분쇄혼합기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학분쇄혼합기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학열기기조작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학열기기조작기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학열기기조작기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학유화기기조작기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학유화기기조작기능사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화학유화기기조작기능사보",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화훼장식기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화훼장식기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화훼장식산업기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화훼재배기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "화훼재배기능사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "환경관리기사1급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "환경관리기사2급",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "환경기능사",
+      "detail": "국가기술자격",
+      "aliases": []
+    },
+    {
+      "name": "환경위해관리기사",
+      "detail": "국가기술자격",
+      "aliases": []
+    }
+  ],
+  "supplementSources": [
+    "https://www.dataq.or.kr/www/dataq_brochure_2022.pdf"
+  ]
+}

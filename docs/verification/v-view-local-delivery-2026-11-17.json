@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-11-17",
+  "artifact": "v_view/build/app/outputs/flutter-apk/v-view-local-ai-debug.apk",
+  "bytes": 192297226,
+  "sha256": "c35c1da7579ac331173b5e5a44192511a1b3db690ae6ad76d9aef143bd9c188e",
+  "entrypoint": "lib/main_local.dart",
+  "mode": "debug",
+  "zipIntegrity": true,
+  "noEnvFiles": true,
+  "configuredPcKeyNotBundled": true,
+  "cloudDeployed": false,
+  "installedWithDataPreserved": true,
+  "androidEmulator": "Android 36; emulator-5556",
+  "launchActivity": "com.vview.v_view/.MainActivity",
+  "launchStatus": "ok",
+  "foregroundActivityVerified": true,
+  "automatedFlutterTests": 179,
+  "externalAiReplacedInAutomatedTests": true,
+  "finalSetupUiTestsRerun": 2,
+  "flutterAnalyze": "No issues found",
+  "limitations": [
+    "Emulator launch verification is not physical-device microphone/camera accuracy validation.",
+    "Synthetic live GPT checks observed invalid responses; see all three artifacts.",
+    "Local changes are not committed or pushed."
+  ]
+}

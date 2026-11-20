@@ -37,8 +37,7 @@ class GazeState {
 
 final gazeAnalyzerProvider = Provider((_) => GazeAnalyzer());
 
-final gazeProvider =
-    StateNotifierProvider<GazeNotifier, GazeState>((ref) {
+final gazeProvider = StateNotifierProvider<GazeNotifier, GazeState>((ref) {
   return GazeNotifier(ref.read(gazeAnalyzerProvider));
 });
 
@@ -48,8 +47,24 @@ class GazeNotifier extends StateNotifier<GazeState> {
   GazeNotifier(this._analyzer) : super(const GazeState());
 
   bool _processing = false;
+  int _captureSegment = 0;
 
-  void start() => state = state.copyWith(isRunning: true, frames: []);
+  void start() {
+    _captureSegment++;
+    state = state.copyWith(isRunning: true, frames: []);
+  }
+
+  void pauseCapture() {
+    if (!state.isRunning) return;
+    _captureSegment++;
+    state = state.copyWith(isRunning: false);
+  }
+
+  void resumeCapture() {
+    if (state.isRunning) return;
+    _captureSegment++;
+    state = state.copyWith(isRunning: true);
+  }
 
   void stop() {
     final metrics = _analyzer.computeMetrics(state.frames);
@@ -59,10 +74,20 @@ class GazeNotifier extends StateNotifier<GazeState> {
   Future<void> processFrame(InputImage inputImage) async {
     if (!state.isRunning || _processing) return;
     _processing = true;
+    final segment = _captureSegment;
     try {
       final frame = await _analyzer.analyze(inputImage);
+      if (!mounted || !state.isRunning || segment != _captureSegment) return;
       state = state.copyWith(
-        frames: [...state.frames, frame],
+        frames: [
+          ...state.frames,
+          GazeFrame(
+            isGazing: frame.isGazing,
+            faceDetected: frame.faceDetected,
+            timestamp: frame.timestamp,
+            segmentId: segment,
+          ),
+        ],
         isCurrentlyGazing: frame.isGazing,
         faceDetected: frame.faceDetected,
       );
@@ -71,8 +96,10 @@ class GazeNotifier extends StateNotifier<GazeState> {
     }
   }
 
-  void reset() => state = const GazeState();
+  void reset() {
+    _captureSegment++;
+    state = const GazeState();
+  }
 
-  GazeMetrics computeFinalMetrics() =>
-      _analyzer.computeMetrics(state.frames);
+  GazeMetrics computeFinalMetrics() => _analyzer.computeMetrics(state.frames);
 }
